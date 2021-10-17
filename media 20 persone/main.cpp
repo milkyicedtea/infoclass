@@ -4,7 +4,7 @@ using namespace std;
 
 int main()
 {
-    float etatotale;
+    float etatotale=0;
     float etamedia;
     float numeropersone;
     float etatemp;
@@ -13,7 +13,7 @@ int main()
     cout << "Inserire il numero totale delle persone" << endl;
     cin >> numeropersone;
 
-    for (n=0; n <numeropersone; n=n+1)
+    for (n=0; n <numeropersone; n++)
     {
         cout << "Inserire l'eta: " << endl;
         cout << "n=" << n << endl;
