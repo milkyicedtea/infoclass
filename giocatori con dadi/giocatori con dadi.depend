@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1634716162 source:d:\informatica\giocatori con dadi\main.cpp
+1634717464 source:d:\informatica\giocatori con dadi\main.cpp
 	<iostream>
 	<cstdlib>
 	<ctime>
