@@ -36,7 +36,7 @@ int main()
             cin >> materia;
             cout << "Inserire il tipo di voto" << endl;
             cin >> tipo;
-            if (voto >= 6 )
+            if (voto >= 6 && tipo == 's')
                 {
                     nsufficienti++;
                 }
@@ -54,14 +54,14 @@ int main()
                 }
 
         }
+        cout << "La media dello studente e' di: " << media << endl;
 }
     if (maxmate = -10)
     {
         maxmate = 0;
     }
-    cout << "La media dello studente e' di: " << media << endl;
     cout << "Il massimo dei voto in matematica e': " << maxmate << endl;
-    cout << "Il totale delle verifiche sufficienti e': " << nsufficienti << endl;
+    cout << "Il totale delle verifiche scritte sufficienti e': " << nsufficienti << endl;
     cout << "I voti scritti e pratici maggiori di nove sono: " << maggioridi9 << endl;
 
     return 0;
