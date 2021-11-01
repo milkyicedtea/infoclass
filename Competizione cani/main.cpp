@@ -20,7 +20,7 @@ int main()
     cin >> ncani;
 
     for (npettorina=1; npettorina<ncani+1; npettorina++){
-    cout << "Inserire l'eta' del cane" << endl;
+    cout << "\nInserire l'eta' del cane" << endl;
     cin >> eta;
     cout << "Inserire il sesso del cane" << endl;
     cin >> sesso;
