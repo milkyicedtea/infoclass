@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1635924066 source:d:\informatica\tabellina n casuale\main.cpp
+	<iostream>
+	<cstdlib>
+	<ctime>
+
