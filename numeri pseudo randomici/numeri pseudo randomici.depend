@@ -1,6 +1,0 @@
-# depslib dependency file v1.0
-1634715614 source:d:\informatica\numeri pseudo randomici\main.cpp
-	<iostream>
-	<cstdlib>
-	<ctime>
-
