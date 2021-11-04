@@ -1,2 +1,9 @@
-# ignore Source backup
+# ignore
 .cpp Source backup/
+*.depend
+*.layout
+*.cbp
+*.exe
+*.o
+*/bin
+*/obj
