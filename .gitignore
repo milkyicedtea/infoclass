@@ -7,3 +7,7 @@
 *.o
 */bin
 */obj
+*.zip
+.vs/
+.vscode/
+*.json
