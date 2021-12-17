@@ -69,9 +69,6 @@ int main()
       }
   }
 
-
-
-
     cout << "Il giocatore vincente e' il giocatore numero " << ngiocatorevincente << " con " << punteggiomax << " punti!" << endl;
     return 0;
 }
