@@ -3,10 +3,9 @@
 #include <ctime>
 
 using namespace std;
-
+int x;
 int main()
 {
-    int x = 0;
     int numero = 0;
     bool indovinato = false;
 
