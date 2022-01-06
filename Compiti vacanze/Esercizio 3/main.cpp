@@ -23,19 +23,19 @@ int main()
             cin >> valorecarta[i];
             cout << "Inserire l'iniziale del seme della prima carta (c, q, f, p)" << endl;
             cin >> seme[i];
-            if (seme[i] == 'c')
+            if (seme[i] == 'c' || seme[i] == 'C')
             {
                 seme[i] = 3;
             }
-            else if (seme[i] == 'q')
+            else if (seme[i] == 'q' || seme[i] == 'Q')
                 {
                     seme[i] = 2;
                 }
-                else if (seme[i] == 'f')
+                else if (seme[i] == 'f' || seme[i] == 'F')
                     {
                         seme[i] = 1;
                     }
-                    else if (seme[i] == 'p')
+                    else if (seme[i] == 'p' || seme[i] == 'P')
                         {
                             seme[i] = 0;
                         }
@@ -46,19 +46,19 @@ int main()
             cin >> valorecarta[i];
             cout << "Inserire l'iniziale del seme della seconda carta (c, q, f, p)" << endl;
             cin >> seme[i];
-            if (seme[i] == 'c')
+            if (seme[i] == 'c' || seme[i] == 'C')
             {
                 seme[i] = 3;
             }
-            else if (seme[i] == 'q')
+            else if (seme[i] == 'q' || seme[i] == 'Q')
                 {
                     seme[i] = 2;
                 }
-                else if (seme[i] == 'f')
+                else if (seme[i] == 'f' || seme[i] == 'F')
                     {
                         seme[i] = 1;
                     }
-                    else if (seme[i] == 'p')
+                    else if (seme[i] == 'p' || seme[i] == 'P')
                         {
                             seme[i] = 0;
                         }
