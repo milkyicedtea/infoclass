@@ -1,5 +1,5 @@
 # ignore
-.cpp Source backup/
+.cpp Source backup
 *.depend
 *.layout
 *.cbp
@@ -8,7 +8,7 @@
 */bin
 */obj
 *.zip
-.vs/
-.vscode/
+.vs
+.vscode
 *.json
 .vscode/c_cpp_properties.json
