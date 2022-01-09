@@ -15,6 +15,7 @@ int main()
     const int nvoti = 5; // lenght, l
 
     float tempvoti = 0;
+    int tempmedia = 0;
 
     int voti[height] [nvoti] {};
 
@@ -26,7 +27,7 @@ int main()
     for (int h = 0; h < nalunni; h++)
     {
 
-        for (int l = 0; l < nvoti; l++)
+        for (int l = 0, tempmedia= 0; l < nvoti; l++)
         {
             if (l == 0)
             {
@@ -37,9 +38,10 @@ int main()
                 cout << "Inserire il voto seguente" << endl;
             }
             cin >> tempvoti;
-            if (l != 0)
+            tempmedia = tempmedia + tempvoti;
+            if (l == (nvoti-1))
             {
-                medie[h] = medie[h];
+                medie[h] = tempmedia/nvoti;
             }
             else
             {
@@ -54,4 +56,5 @@ int main()
         cout << "La media dell'alunno numero " << i+1 << " equivale a " << medie[i] << endl;
     }
 
+    return 0;
 }
