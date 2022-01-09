@@ -10,7 +10,7 @@ using namespace std;
 int main()
 {
     int n = 0;
-    int voto = 0;
+    float voto = 0;
     int i = 0;
     float media = 0;
     int insufficienze = 0;
