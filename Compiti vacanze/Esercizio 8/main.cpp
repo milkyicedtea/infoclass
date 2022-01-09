@@ -13,7 +13,7 @@ using namespace std;
 
 int main()
 {
-    const int n = 2;
+    const int n = 25;
 
     int max = -10;
     string alunni[n];

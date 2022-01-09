@@ -7,14 +7,17 @@
 
 using namespace std;
 
-const int n = 2;
-
 int main()
 {
+    int n = 0;
     int voto = 0;
     int i = 0;
     float media = 0;
     int insufficienze = 0;
+
+    cout << "Inserire il numero di voti" << endl;
+
+    cin >> n;
 
     for (i = 0; i < n; i++)
     {
