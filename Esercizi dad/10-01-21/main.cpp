@@ -27,6 +27,7 @@ void inserisci()
 
 }
 
+
 int main()
 {
     //Leggi una sequenza di numeri, al primo 0 incontrato determina

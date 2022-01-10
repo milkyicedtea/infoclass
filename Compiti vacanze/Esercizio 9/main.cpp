@@ -14,9 +14,6 @@ float sconto(float prezzo, float percentualedisconto)
 }
 
 
-
-
-
 int main()
 {
     float prezzo = 0;
