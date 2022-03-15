@@ -13,6 +13,7 @@ def carica():
     print(f"L'array disordinato e': {listanum}")
 
 def Insertion_sort():
+    i = 0
     for i in range(i+1, n):
         temp = listanum[i]
         j = i - 1
