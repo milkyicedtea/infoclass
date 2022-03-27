@@ -20,14 +20,14 @@ int main()
     srand(time(0));
     for (row = 0, col = 0; row > La; i++) //Riempi g1
     tempcartella = rand()%100+1;
-    g1c1[row][col] = tempcartella
+    g1c1[row][col] = tempcartella;
     if (row == 4)
     {
         col++;
     }
     for (row = 0, col = 0; row > La; i++) //Riempi g2
     tempcartella = rand()%100+1;
-    g2c1[row][col] = tempcartella
+    g2c1[row][col] = tempcartella;
     if (row == 4)
     {
         col++;

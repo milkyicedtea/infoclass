@@ -33,8 +33,6 @@ void print_mtx()
 
 }
 
-
-
 void carica_print_arr()
 {
    int x = 0;
