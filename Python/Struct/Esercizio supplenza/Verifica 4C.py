@@ -1,5 +1,4 @@
 import os
-import array as arr
 
 class ProductProperties:
     def __init__(self, nome: str = "", prezzo: float = 0, quantita: int = 0, reparto: str = "", codice: int = 0):
