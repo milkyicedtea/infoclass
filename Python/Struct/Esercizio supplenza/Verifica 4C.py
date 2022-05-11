@@ -13,15 +13,15 @@ prodotti: list = [ProductProperties()] *15
 def carica_prodotto(x = None):
     if x == None:
         for x in range(15):
-            prodotti.append(ProductProperties(nome = input('Inserire il nome del prodotto '), prezzo = input('Inserire il prezzo del prodotto '), quantita = input("Inserire la quantita' del prodotto "), reparto = input('Inserire il nome del reparto '), codice = input('Inserire il codice del prodotto ')))
+            prodotti.append(ProductProperties(nome = input('Inserire il nome del prodotto '), prezzo = float(input('Inserire il prezzo del prodotto ')), quantita = int(input("Inserire la quantita' del prodotto ")), reparto = input('Inserire il nome del reparto '), codice = int(input('Inserire il codice del prodotto '))))
             x+=1
 
     elif x != None:
         prodotti[x].nome = input('Inserire il nome del prodotto ')
-        prodotti[x].prezzo = input('Inserire il prezzo del prodotto ')
-        prodotti[x].quantita = input("Inserire la quantita' del prodotto ")
+        prodotti[x].prezzo = float(input('Inserire il prezzo del prodotto '))
+        prodotti[x].quantita = int(input("Inserire la quantita' del prodotto "))
         prodotti[x].reparto = input('Inserire il nome del reparto ')
-        prodotti[x].codice = input('Inserire il codice del prodotto ')
+        prodotti[x].codice = int(input('Inserire il codice del prodotto '))
 
 def print_prodotto(x = None):
     if x == None:
@@ -75,7 +75,7 @@ def quantita_magg_20():
         x+=1
 
 def main():
-    scelta = input('Scegliere cosa fare 1-8')
+    scelta = int(input('Scegliere cosa fare 1-8'))
     match scelta:
         case 1:
             carica_prodotto()
@@ -95,6 +95,7 @@ def main():
         case 6:
             prezzo_da_confrontare = input("Scegliere un prezzo da confrontare ")
             prezzo_superiore_a(prezzo_da_confrontare)
+
         case 7:
             print(media_casalinghi())
 
