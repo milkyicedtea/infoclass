@@ -26,7 +26,7 @@ def carica_prodotto(x = None):
 def print_prodotto(x = None):
     if x == None:
         for x in range(15):
-            print(prodotti[x])
+            print(f"Nome articolo: {prodotti[x].nome}, Prezzo articolo: {prodotti[x].prezzo}, Quantita' articolo: {prodotti[x].quantita}, Reparto articolo: {prodotti[x].reparto}, Codice articolo: {prodotti[x].codice}")
             
     elif x != None:
         print(f"Nome articolo: {prodotti[x].nome}, Prezzo articolo: {prodotti[x].prezzo}, Quantita' articolo: {prodotti[x].quantita}, Reparto articolo: {prodotti[x].reparto}, Codice articolo: {prodotti[x].codice}")
