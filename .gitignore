@@ -9,7 +9,9 @@
 */obj
 *.zip
 .vs
+x64
 .vscode
 *.json
 .vscode/c_cpp_properties.json
 Esercizi Verifica dad
+*.user
