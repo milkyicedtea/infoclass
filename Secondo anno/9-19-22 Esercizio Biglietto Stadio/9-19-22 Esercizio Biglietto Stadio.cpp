@@ -35,13 +35,16 @@ void carica(int index)
     cin >> arr[index].orientamento;
     cout << "\nInserire posto: ";
     cin >> arr[index].posto;
+
+    totale_biglietti++;
 }
 
 void stampa(int index)
 {
-    if (index-1 <= 0 or totale_biglietti == 0)
+    if (index-1 < 0 or totale_biglietti == 0)
     {
-
+        cout << "Non esistono abbastanza biglietti oppure il numero del biglietto e' minore di 0 riprovare con un biglietto esistente" << endl;
+        return;
     }
     cout << "\nCodice fiscale: ";
     cout << arr[index].codie_fiscale;
@@ -61,30 +64,35 @@ void stampa(int index)
 int main()
 {
     int scelta;
+    int index = 0;
+    int giri = 0;
 
     do
     {
+        cout << "Inserire 0 per uscire;\nInserire 1 per inserire i dati del biglietto;\nInserire 2 per inserire stampare i dati del biglietto" << endl;
+        cin >> scelta;
+        giri++;
         switch (scelta)
         {
             case 0:
                 break;
 
             case 1:
-                int index = 0;
                 cout << "Inserire il numero del biglietto ";
                 cin >> index;
                 carica(index);
                 break;
 
             case 2:
-                int index = 0;
                 cout << "Inserire il numero del biglietto ";
                 cin >> index;
                 stampa(index);
+                break;
 
             default:
+                cout << "L'istruzione inserita e' impossibile da eseguire. Programma in chiusura" << endl;
                 scelta = 0;
                 break;
         }
-    } while (scelta != 0);
+    } while (scelta != 0 && giri >= 1);
 }
