@@ -9,26 +9,26 @@ struct Vini
     string denominazione;
     string colore;
     string origine;
-    int anno_imbottigliamento;
-    float gradazione;
-    float prezzo;
+    int anno_imbottigliamento = 0;
+    float gradazione = 0.0;
+    float prezzo = 0.0;
 };
-
-Vini* pointer1 = NULL;
-Vini* pointer2 = NULL;
-Vini* pointer3 = NULL;
-Vini* pointer4 = NULL;
 
 Vini vino1;
 Vini vino2;
 Vini vino3;
 Vini vino4;
 
-Vini* arr[N]{ pointer1, pointer2, pointer3, pointer4 };
+Vini* pointer1 = &vino1;
+Vini* pointer2 = &vino2;
+Vini* pointer3 = &vino3;
+Vini* pointer4 = &vino4;
+
+Vini* arr[N] {pointer1, pointer2, pointer3, pointer4};
 
 void carica(Vini* pp)
 {
-    /*cout << "Inserire la denominazione ";
+    cout << "Inserire la denominazione ";
     cin >> pp -> denominazione;
     cout << "Inserire il colore ";
     cin >> pp -> colore;
@@ -37,76 +37,92 @@ void carica(Vini* pp)
     cout << "Inserire l'anno di imbottigliamente ";
     cin >> pp -> anno_imbottigliamento;
     cout << "Inserire la gradazione ";
-    cin >> pp -> gradazione;*/
+    cin >> pp -> gradazione;
     cout << "Inserire il prezzo ";
     cin >> pp->prezzo;
 }
 
-void massimo(Vini* a, Vini* b, Vini* c, Vini* d)
+void massimo(Vini* array[])
 {
-    if (a->prezzo > b->prezzo)
+    int contatore = 0;
+    float max = 0.0;
+
+    for (int i = 0; i < N; i++)
     {
-        if (a->prezzo > c->prezzo)
+        if (max < array[i]->prezzo)
         {
-            if (a->prezzo > d->prezzo)
-            {
-                cout << a->denominazione;
-            }
-            else
-            {
-                cout << cout << d->denominazione;
-            }
+            max = array[i]->prezzo;
+            contatore = i;
         }
     }
-    else if (b->prezzo > c->prezzo)
-    {
-        if (b->prezzo > d->prezzo)
-        {
-            cout << b->denominazione;
-        }
-        else
-        {
-            cout << d->denominazione;
-        }
-    }
-    else
-    {
-        if (c->prezzo > d->prezzo)
-        {
-            cout << c->denominazione;
-        }
-        else
-        {
-            cout << d->denominazione;
-        }
-    }
+
+    cout << "Il vino che costa di piu' e' il: " << array[contatore]->denominazione << endl;
 }
 
 float prezzo_medio()
 {
     float media = 0;
-    int i = 0;
     for (int i = 0; i < N; i++)
     {
-        media = +arr[i]->prezzo;
+        media += arr[i]->prezzo;
     }
-    media /= N;
 
-    return media;
+    return media/N;
 }
 
+void gradazione_rossi()
+{
+    for (int i = 0; i < N; i++)
+    {
+        if (arr[i]->colore == "rosso" || arr[i]->colore == "Rosso" || arr[i]->colore == "ROSSO")
+        {
+            if (arr[i]->gradazione > 12)
+            {
+                cout << arr[i]->denominazione << endl;
+            }
+        }
+    }
+}
 
 int main()
 {
-    pointer1 = &vino1;
-    pointer2 = &vino2;
-    pointer3 = &vino3;
-    pointer4 = &vino4;
-    carica(pointer1);
-    carica(pointer2);
-    carica(pointer3);
-    carica(pointer4);
-    massimo(pointer1, pointer2, pointer3, pointer4);
+    int scelta = 10;
+    do
+    {
+        cout << "Inserire 0 per uscire;\nInserire 1 per caricare i vini;\nInserire 2 per sapere il nome del vino piu' costoso;\nInserire 4 per sapere il prezzo medio tra tutti i vini;\nInserire 5 per i vini rossi con gradazione superiore a 12;" << endl;
+        cin >> scelta;
+        switch (scelta)
+        {
+            case 0:
+                break;
+
+            case 1:
+                carica(pointer1);
+                carica(pointer2);
+                carica(pointer3);
+                carica(pointer4);
+                break;
+
+            case 2:
+                massimo(arr);
+                break;
+
+            case 3:
+                prezzo_medio();
+                break;
+
+            case 4:
+                cout << "La media dei prezzi dei vini e': " << prezzo_medio() << endl;
+
+            case 5:
+                gradazione_rossi();
+                break;
+
+            default:
+                scelta = 0;
+                break;
+        }
+    } while (scelta != 0);
 
     return 0;
 }
