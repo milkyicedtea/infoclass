@@ -1,12 +1,11 @@
 #include <iostream>
-#include <cstdlib>
 
 using namespace std;
 
 struct vagone
 {
-    int info;
-    vagone* prox;
+    int info = 0;
+    vagone* prox = NULL;
     vagone* motrice = NULL;
 };
 
