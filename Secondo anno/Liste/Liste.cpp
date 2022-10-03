@@ -6,7 +6,7 @@ struct vagone
 {
     int info = 0;
     vagone* prox = NULL;
-    vagone* motrice = NULL;
+    //vagone* motrice = NULL;
 };
 
 int counter_inseriti = 0;
@@ -101,7 +101,7 @@ int main()
     int scelta = 10;
     do
     {
-        cout << "Inserire 0 per uscire;\nInserire 1 per caricare un valore singolo;\nInserire 2 per inserire un valore in testa;\nInserire 3 per caricare un valore in code;\nInserire 4 per stampare tutti i valori;\nInserire 5 per eseguire la media tra i valori" << endl;
+        cout << "Inserire 0 per uscire;\nInserire 1 per inizializzare una lista con un valore;\nInserire 2 per inserire un valore in testa;\nInserire 3 per caricare un valore in code;\nInserire 4 per stampare tutti i valori;\nInserire 5 per eseguire la media tra i valori" << endl;
         cin >> scelta;
         switch (scelta)
         {
