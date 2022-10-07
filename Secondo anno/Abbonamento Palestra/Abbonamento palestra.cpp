@@ -70,6 +70,29 @@ void InsCoda(string codice_f, int durata_abb, string tipo_abb, float prezzo_abb)
     }
 }
 
+void DropTesta()
+{
+    testa = testa->prox;
+}
+
+void DropCoda()
+{
+    Abbonamento* app = NULL;
+    if (testa->prox == NULL)
+    {
+        testa = NULL;
+    }
+    else
+    {
+        app = testa;
+        while(app->prox->prox != NULL)
+        {
+            app = app->prox;
+        }
+        app->prox = NULL;
+    }
+} 
+
 void CalcolaImportiTotali()
 {
     float importo_totale = 0.0;
@@ -91,6 +114,30 @@ void CalcolaImportiTotali()
     }
 }
 
+void Abbonamenti_Trimestrali()
+{
+    int counter_trimestrali = 0;
+
+    Abbonamento* app = NULL;
+    if (testa == NULL)
+    {
+        cout << "Your list is empty" << endl;
+    }
+    else
+    {
+        app = testa;
+        while (app != NULL)
+        {
+            if (app->durata == 3);
+            {
+                counter_trimestrali++;
+            }
+            app = app->prox;
+        }
+        cout << "Il totale degli importi e': " << counter_trimestrali << endl;
+    }
+}
+
 int main()
 {
     string codice_fiscale = "";
@@ -100,7 +147,7 @@ int main()
     int scelta = 10;
     do
     {
-        cout << "Inserire 0 per uscire;\nInserire 1 per inizializzare una lista;\nInserire 2 per inserire un abbonamento in cima alla lista;\nInserire 3 per inserire un abbonamento in fondo alla lista;\nInserire 4 per stampare il valore dell'importo totale;" << endl;
+        cout << "Inserire 0 per uscire;\nInserire 1 per inizializzare una lista;\nInserire 2 per inserire un abbonamento in cima alla lista;\nInserire 3 per inserire un abbonamento in fondo alla lista;\nInserire 4 per stampare il valore dell'importo totale;\nInserire 5 per eliminare la testa della lista;\nInserire 6 per eliminare la coda della lista;" << endl;
         cin >> scelta;
         switch (scelta)
         {
@@ -149,6 +196,14 @@ int main()
 
         case 4:
             CalcolaImportiTotali();
+            break;
+
+        case 5:
+            DropCoda();
+            break;
+
+        case 6:
+            DropTesta();
             break;
 
         default:
