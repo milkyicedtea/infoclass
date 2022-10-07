@@ -95,13 +95,36 @@ void mediaElementi()
     }
 }
 
+void DropTesta()
+{
+    motrice = motrice->prox;
+}
+
+void DropCoda()
+{
+    vagone* app = NULL;
+    if (motrice->prox == NULL)
+    {
+        motrice = NULL;
+    }
+    else
+    {
+        app = motrice;
+        while(app->prox->prox != NULL)
+        {
+            app = app->prox;
+        }
+        app->prox = NULL;
+    }
+}
+
 int main()
 {
     int info = 0;
     int scelta = 10;
     do
     {
-        cout << "Inserire 0 per uscire;\nInserire 1 per inizializzare una lista con un valore;\nInserire 2 per inserire un valore in testa;\nInserire 3 per caricare un valore in code;\nInserire 4 per stampare tutti i valori;\nInserire 5 per eseguire la media tra i valori" << endl;
+        cout << "Inserire 0 per uscire;\nInserire 1 per inizializzare una lista con un valore;\nInserire 2 per inserire un valore in testa;\nInserire 3 per caricare un valore in code;\nInserire 4 per stampare tutti i valori;\nInserire 5 per eseguire la media tra i valori;\nInserire 6 per eliminare la testa della lista;\nInserire 7 per eliminare la coda della lista;" << endl;
         cin >> scelta;
         switch (scelta)
         {
@@ -133,6 +156,14 @@ int main()
 
             case 5:
                 mediaElementi();
+                break;
+
+            case 6:
+                DropTesta();
+                break;
+
+            case 7:
+                DropCoda();
                 break;
 
             default:
