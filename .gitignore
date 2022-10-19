@@ -1,17 +1,26 @@
 # ignore
-.cpp Source backup
-*.depend
+
+#code::blocks files
 *.layout
 *.cbp
 *.exe
 *.o
 */bin
 */obj
+
+#Zip files
 *.zip
+
+#Visual studio files
 .vs
-x64
 .vscode
 *.json
 .vscode/c_cpp_properties.json
+
+#Visual studio debug/build files
+Debug
+x64
+
+#Personal files
 Esercizi Verifica dad
 *.user
