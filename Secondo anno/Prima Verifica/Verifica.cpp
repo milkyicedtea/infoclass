@@ -1,3 +1,5 @@
+//Voto finale: 9
+
 #include <iostream>
 #include <ctime>
 #include <cstdlib>
