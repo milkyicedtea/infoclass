@@ -40,16 +40,14 @@ class Calcolatrice
             return x;
         }
 
-        float add(float ax, float by)
+        float add()
         {
-            setValues(ax, by);
-            return ax + by;
+            return x + y;
         }
 
-        float sub(float ax, float by)
+        float sub()
         {
-            setValues(ax, by);
-            return ax - by;
+            return x - y;
         }
 
         float rad(float ax)
