@@ -7,9 +7,9 @@ using std::endl;
 class Orologio
 {
     private:
-        int ore = 0;
-        int minuti = 0;
-        int secondi = 0;
+        int ore;
+        int minuti;
+        int secondi;
 
     public:
     //constructors
@@ -70,11 +70,11 @@ int main()
         cin >> h;
         cin >> m;
         cin >> s;
-        if (h > 24 or h < 0 and m > 60 or m < 0 and s > 60 or s < 0)
+        if (h > 24 or h < 0 and m > 59 or m < 0 and s > 59 or s < 0)
         {
             cout << "Orario non valido" << endl;
         }
-    }while (h > 24 or h < 0 and m > 60 or m < 0 and s > 60 or s < 0);
+    }while (h > 24 or h < 0 and m > 59 or m < 0 and s > 59 or s < 0);
     orologio.setOrario(h, m, s);
     orologio.getOrario();
     return 0;
