@@ -11,6 +11,9 @@
 #Zip files
 *.zip
 
+#RAR files
+*.rar
+
 #Visual studio files
 .vs
 .vscode
