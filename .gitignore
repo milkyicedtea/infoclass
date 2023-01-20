@@ -1,5 +1,11 @@
 # ignore
 
+#Jetbrains
+.idea
+
+#java files
+out
+
 #code::blocks files
 *.layout
 *.cbp
