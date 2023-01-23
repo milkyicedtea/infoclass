@@ -6,21 +6,21 @@ public class libro
     public static double costo_pagine = 0.05;
     final double costo_fisso = 5.5;
 
-    public libro()
+    public libro()  //costruttore default
     {
         this.titolo = "";
         this.autore = "";
         this.numero_pagine = 0;
     }
 
-    public libro(String titolo, String autore, int numero_pagine)
+    public libro(String titolo, String autore, int numero_pagine)   //costruttore con passaggio
     {
         this.titolo = titolo;
         this.autore = autore;
         this.numero_pagine = numero_pagine;
     }
 
-    public libro(libro libro)
+    public libro(libro libro)   //costruttore di copia
     {
         this.titolo = libro.titolo;
         this.autore = libro.autore;
