@@ -37,7 +37,7 @@ public class libro
         return this.autore; //return autore
     }
 
-    public int getNumero_pagine()
+    public int  getNumero_pagine()
     {
         return this.numero_pagine; //return numero_pagine
     }
