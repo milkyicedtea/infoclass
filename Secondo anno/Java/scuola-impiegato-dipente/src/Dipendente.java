@@ -1,5 +1,6 @@
-public class Dipendente
+public abstract class Dipendente
 {
+    protected String nome;
     protected String genere;
     protected DataDiNascita dataDiNascita = new DataDiNascita();
     protected float stipendio;
@@ -17,5 +18,10 @@ public class Dipendente
         this.dataDiNascita.setMonth(month);
         this.dataDiNascita.setYear(year);
         this.stipendio = stipendio;
+    }
+
+    public String getNome()
+    {
+        return nome;
     }
 }
