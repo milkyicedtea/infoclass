@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.params=
+comment0.target=MedicoSpecialista()
+comment1.params=nome\ cognome\ eta\ indirizzo\ telefono\ pagaOraria\ lavoraInOspedale\ giornoDiVisita
+comment1.target=MedicoSpecialista(java.lang.String,\ java.lang.String,\ int,\ java.lang.String,\ java.lang.String,\ float,\ boolean,\ java.lang.String)
+comment2.params=
+comment2.target=float\ getPagaOraria()
+comment3.params=
+comment3.target=java.lang.String\ getGiornoDiVisita()
+comment4.params=
+comment4.target=boolean\ isLavoraInOspedale()
+numComments=5

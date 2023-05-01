@@ -5,8 +5,6 @@
 #Jetbrains
 .idea
 
-
-
 #java files
 out
 
@@ -50,12 +48,8 @@ x64
 Esercizi Verifica dad
 *.user
 
-
-
 #BlueJ
 *.iml
-
-
 
 #NetBeans
 nbproject
@@ -64,7 +58,6 @@ dist
 lib
 *.mf
 build.xml
-
 
 #old files
 *.old

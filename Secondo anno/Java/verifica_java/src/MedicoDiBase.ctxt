@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.params=
+comment0.target=MedicoDiBase()
+comment1.params=nome\ cognome\ eta\ indirizzo\ telefono\ mutuatiAssistiti\ stipendioBase
+comment1.target=MedicoDiBase(java.lang.String,\ java.lang.String,\ int,\ java.lang.String,\ java.lang.String,\ int,\ float)
+comment2.params=quotaFissa
+comment2.target=void\ setQuotaFissa(float)
+comment3.params=
+comment3.target=float\ getStipendioTotale()
+comment4.params=
+comment4.target=void\ printMedicoDiBase()
+numComments=5
