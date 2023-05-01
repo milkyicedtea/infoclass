@@ -38,7 +38,9 @@ Esercizi Verifica dad
 *.iml
 
 #NetBeans
-/nbproject
-/build
-/dist
-/out
+nbproject
+build
+dist
+lib
+*.mf
+build.xlm
