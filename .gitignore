@@ -3,8 +3,6 @@
 #Jetbrains
 .idea
 
-
-
 #java files
 out
 
@@ -40,6 +38,7 @@ Esercizi Verifica dad
 *.iml
 
 #NetBeans
-*/nbproject
-*/build
-*/dist
+/nbproject
+/build
+/dist
+/out
