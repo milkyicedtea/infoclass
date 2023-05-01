@@ -35,3 +35,11 @@ x64
 #Personal files
 Esercizi Verifica dad
 *.user
+
+#BlueJ
+*.iml
+
+#NetBeans
+*/nbproject
+*/build
+*/dist
