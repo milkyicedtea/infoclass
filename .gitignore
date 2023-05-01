@@ -1,5 +1,7 @@
 # ignore
 
+
+
 #Jetbrains
 .idea
 
@@ -7,6 +9,8 @@
 
 #java files
 out
+
+
 
 #code::blocks files
 *.layout
@@ -16,11 +20,17 @@ out
 */bin
 */obj
 
+
+
 #Zip files
 *.zip
 
+
+
 #RAR files
 *.rar
+
+
 
 #Visual studio files
 .vs
@@ -28,10 +38,33 @@ out
 *.json
 .vscode/c_cpp_properties.json
 
+
+
 #Visual studio debug/build files
 Debug
 x64
 
+
+
 #Personal files
 Esercizi Verifica dad
 *.user
+
+
+
+#BlueJ
+*.iml
+
+
+
+#NetBeans
+nbproject
+build
+dist
+lib
+*.mf
+build.xml
+
+
+#old files
+*.old
