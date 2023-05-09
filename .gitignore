@@ -52,7 +52,7 @@ Esercizi Verifica dad
 *.iml
 
 #NetBeans
-nbproject
+nbproject/private
 build
 dist
 lib
