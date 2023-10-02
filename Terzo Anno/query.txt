@@ -1,0 +1,9 @@
+select i.cognome, p.nome 
+	from impiegato as i,
+		 progetto as p,
+		 partecipazione as pa
+			where(i.matricola=pa.impiegato) and (p.sigla=pa.progetto)
+			
+select i.cognome, i.stidendio*0.8
+	as stipendio_tassato
+	from impiegato as i
