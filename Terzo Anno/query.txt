@@ -1,9 +1,63 @@
+========
+impiegati
+
 select i.cognome, p.nome 
-	from impiegato as i,
-		 progetto as p,
-		 partecipazione as pa
-			where(i.matricola=pa.impiegato) and (p.sigla=pa.progetto)
+	from impiegato as i, progetto as p, partecipazione as pa
+		where(i.matricola=pa.impiegato) and (p.sigla=pa.progetto)
 			
 select i.cognome, i.stidendio*0.8
 	as stipendio_tassato
 	from impiegato as i
+	
+	
+	
+========
+pacchi
+
+select p.id_pacco, p.data_consegna, p.tipo
+	from clienti as c, pacchi as pa
+		where (p.id_cliente = c.id_cliente) and
+		(c.nome = 'federico') and
+		(c.cognome = 'bossetti')
+		
+// ottenere tutte le info di un pacco
+select p.*
+	from clienti
+	
+// ottenere dipendenti di ogni sede
+select s.id_sede, s.indirizzo, d.nome, d.cognome
+	from sedi as s, dipendenti as d
+		where (d.id_sede = s.id_sede)
+		
+// 
+
+		
+// 3: lista dei pacchi in uscita dalle sedi
+select p.id_pacco, u.data_uscita, s.id_sede
+	from pacchi as p, uscite as u, sedi as sede
+		where (p.id_pacco = u.id_pacco) and
+		(u.data_uscita = s.id_sede)
+		
+// 4: lista dei pacchi degradabili con indicazione del cliente che li ha spediti
+select p.id_pacco, p.id_cliente, p.biodegradabile
+	from pacchi as p
+		where (p.biodegradabile = true)
+		
+// 5: fissata una sede restuire la generalita' dei dipendenti che ci lavorano
+select d.*
+	from dipendenti as d, sedi as s
+		where (s.id_sede = d.is_sede) and
+		(s.id_sede = 1)
+
+
+// 6: lista dei pacchi in uscita, sia fragili che degradabili con indicazione della sede
+select u.codice_pacco, s.id_sede, p.biodegradabile, p.fragile
+	from uscite as u, pacchi as p, sedi as s
+		where (p.biodegradabile = true) and
+		(p.fragile = true) and
+(u.codice_pacco = p.id_pacco)
+
+// 7: nome, cognome, telefono dei dipendenti carrellisti
+select d.nome, d.cognome, d.telefono
+	from dipendenti as d
+		where (d.mansione = 'carrellista')
