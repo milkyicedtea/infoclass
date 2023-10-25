@@ -1,0 +1,53 @@
+Query verifica
+
+1:
+select a.titolo, a.sottotitolo, a.numero_di_righe
+	from Articolo as a
+	
+2:
+select a.titolo
+	from Articolo as a
+		where (month(a.data) = 02)
+		
+3:
+select r.titolo, a.*
+	from Articolo as a
+		where (a.id_rivista = r.id_rivista)
+		
+4:
+select arg.argomento, r.titolo, art.titolo, numero_di_righe
+	from Argomento as arg, Rivista as r, Articolo as art
+		where (art.id_rivista = r.id_rivista) and
+		(arg.id_argomento = art.id_argomento) and
+		(art.numero_di_righe > 100) and
+		(art.numero_di_righe < 200)
+		
+5:
+select au.nome, au.cognome
+	from Autore as au, UnisciAutoreArticolo as uaa, Articolo as art
+		where (au.id_autore = uaa.id_autore) and
+		(uaa.id_articolo = art.id_articolo) and
+		(art.titolo = 'Masterizzazione')
+		
+6:
+select au.nome, au.cognome, au.data_di_nascita, r.titolo
+	from Autore as au, Rivista as r, UnisciAutoreArticolo as uaa, Articolo as art
+		where (year(au.data_di_nascita) = 1965) and
+		(au.id_autore = uaa.id_autore) and
+		(uaa.id_articolo = art.id_articolo) and
+		(art.id_rivista = r.id_rivista)
+		
+7:
+select au.*, art.data, r.titolo
+	from Autore as au, Articolo as art, Rivista as r, UnisciAutoreArticolo as uaa
+		where (au.id_autore = uaa.id_autore) and
+		(uaa.id_articolo = art.id_articolo) and
+		(year(art.data) = 2002) and
+		(art.id_rivista = r.id_rivista)
+		
+8:
+select r.titolo, art.titolo
+	from Rivista as r, Articolo as art
+		where (art.id_rivista = r.id_rivista) and
+		(year(art.data) = 2002) and
+		(art.numero_di_righe < 130)

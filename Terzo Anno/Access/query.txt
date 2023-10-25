@@ -1,0 +1,105 @@
+========
+impiegati
+
+select i.cognome, p.nome 
+	from impiegato as i, progetto as p, partecipazione as pa
+		where(i.matricola=pa.impiegato) and (p.sigla=pa.progetto)
+			
+select i.cognome, i.stidendio*0.8
+	as stipendio_tassato
+	from impiegato as i
+	
+	
+	
+========
+pacchi
+
+select p.id_pacco, p.data_consegna, p.tipo
+	from clienti as c, pacchi as pa
+		where (p.id_cliente = c.id_cliente) and
+		(c.nome = 'federico') and
+		(c.cognome = 'bossetti')
+		
+// 1: ottenere tutte le info di un pacco
+select p.*
+	from clienti
+	
+// 2: ottenere dipendenti di ogni sede
+select s.id_sede, s.indirizzo, d.nome, d.cognome
+	from sedi as s, dipendenti as d
+		where (d.id_sede = s.id_sede)
+		
+// 
+
+		
+// 3: lista dei pacchi in uscita dalle sedi
+select p.id_pacco, u.data_uscita, s.id_sede
+	from pacchi as p, uscite as u, sedi as sede
+		where (p.id_pacco = u.id_pacco) and
+		(u.data_uscita = s.id_sede)
+		
+// 4: lista dei pacchi degradabili con indicazione del cliente che li ha spediti
+select p.id_pacco, p.id_cliente, p.biodegradabile
+	from pacchi as p
+		where (p.biodegradabile = true)
+		
+// 5: fissata una sede restuire la generalita' dei dipendenti che ci lavorano
+select d.*
+	from dipendenti as d, sedi as s
+		where (s.id_sede = d.is_sede) and
+		(s.id_sede = 1)
+
+
+// 6: lista dei pacchi in uscita, sia fragili che degradabili con indicazione della sede
+select u.codice_pacco, s.id_sede, p.biodegradabile, p.fragile
+	from uscite as u, pacchi as p, sedi as s
+		where (p.biodegradabile = true) and
+		(p.fragile = true) and
+(u.codice_pacco = p.id_pacco)
+
+// 7: nome, cognome, telefono dei dipendenti carrellisti
+select d.nome, d.cognome, d.telefono
+	from dipendenti as d
+		where (d.mansione = 'carrellista')
+		
+		
+
+========
+Caserma
+
+// 1: Dare in usita le caserme con le zone di pertinenza
+select c.nome, z.id_zona
+	from Zona as z, Caserma as c
+		where (z.id_caserma = c.matricola)
+
+// 2: Tutti gli automezzi dell'unita' operativa Pantere
+select a.id_automezzo, a.modello, a.anno, uo.nome
+	from UnitaOperativa as uo, Automezzo as a
+		where (uo.id_unita_operativa = a.id_unita_operativa) and
+		(uo.nome = 'Pantere')
+		
+
+// 3: Tutti gli automezzi immatricolai dopo il 1996
+select a.id_automezzo, a.modello, a.anno
+	from Automezzo as a
+		where (a.anno > 1996)
+
+// 4: Caserme inaugurate dopo il 2000 con indiazione dei mezzi posseduti
+select c.matricola, c.nome, c.indirizzo, a.id_automezzo, a.modello
+	from Caserma as c, Automezzo as a, UnitaOperativa as uo
+		where (c.matricola = uo.id_caserma) and
+		(uo.id_unita_operativa = a.id_unita_operativa) and
+		(year(c.inaugurazione) > 2000)
+
+// 5: Stampa dei mezzi con capacita' inferiore a 8220
+
+// 6: Caserma e zona coperta dall'unita' operativa Grisu
+select c.nome, z.id_zona
+	from Caserma as c, Zona as z, UnitaOperativa as uo
+		where (c.matricola = z.id_caserma) and
+		(c.matricola = uo.id_caserma) and
+		(uo.nome = 'Grisu')
+
+// 7: Nome delle unita' operative che dispongono di autoscale
+
+// 8: Caserme che dispongono di automezzi con lunghezza inferiore a 10
