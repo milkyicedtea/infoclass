@@ -51,4 +51,7 @@ alter table ruoli add foreign key(ISBN) references libri(ISBN);
 
 insert into autore (id_autore, cognome, nome, nazione, data_di_nascita, genere)
     values ('A001', 'Vincen', 'John', 'Inghilterra', str_to_date('03/01/1892', '%d/%m/%Y'), 'm'),
-           ('A002', 'Colldi', 'Carlo', 'Italia', str_to_date('24/11/1826', '%d/%m/%Y'), 'm')
+           ('A002', 'Colldi', 'Carlo', 'Italia', str_to_date('24/11/1826', '%d/%m/%Y'), 'm');
+
+insert into libri (ISBN, titolo, lingue, anno, prezzo, id_categoria, id_editore)
+    values ('')
