@@ -1,0 +1,108 @@
+<html>
+<head>
+	<title>Prova form</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<div class="container" style="align-items: center; align-content: center">
+	<div class="card" style="text-align: center">
+	<div class="info" style="text-align: center;">
+		<br>
+			<div style="text-align: center;"><h1> Pizzeria </h1>  </div>
+
+		<br><br>
+
+		<form name="Pizzeria" action="ordina_pizza.php" method="POST">
+<b>
+<audio controls>
+<source src="bud.mp3" type="audio/mp3">
+</audio>
+
+</b>
+	<h3>Cognome</h3>
+		<label>
+			<input type="text" name="cognome" maxlength="30" size="30" style="font-size:14px"/>
+		</label>
+	<h3>Nome</h3>
+		<label>
+			<input type="text" name="nome" maxlength="30" size="30" style="font-size:14px">
+		</label>
+	<h3>Indirizzo</h3>
+		<label>
+			<input type="text" name="indirizzo" maxlength="50" size="50" style="font-size:14px">
+		</label>
+	<h3>Città</h3>
+		<label>
+			<input type="text" name="citta" maxlength="30" size="30" style="font-size:14px">
+		</label>
+	<h3>E-Mail</h3>
+		<label>
+			<input type="text" name="email" maxlength="30" size="30" style="font-size:14px">
+		</label>
+	<h3>Tipo Pizza</h3>
+		<label>
+			<select  name="scelta" style="font-size:14px">
+				<option>Bianca
+				<option>Rossa
+				<option>Margherita
+				<option>Diavola
+				<option>Quattro stagioni
+			</select>
+		</label>
+<br>
+<br>
+<div style="text-align: center">
+<table bgcolor=red border=1>
+	<th>Oggetti solo prova passaggio parametri </th>
+	<tr>
+		<td>
+			<label>
+				<input type="checkbox" name="tipocheck[]" value="bianca">
+			</label>&nbsp;Bianca
+			<label>
+				<input type="checkbox" name="tipocheck[]" value="rossa">
+			</label>&nbsp;Rossa
+			<label>
+				<input type="checkbox" name="tipocheck[]" value="Mozzarella">
+			</label>&nbsp;Mozzarella
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<label>
+				<input type="radio" name="quality" value="d">
+			</label>&nbsp;Dietetica
+			<label>
+				<input type="radio" name="quality" value="g">
+			</label>&nbsp;Ghiotta
+		</td>
+	</tr>
+</table>
+</div>
+<br>
+
+<div style="text-align: center;">
+<button
+	onclick="window.location.href='ordina_pizza.php'"
+>
+	Ordina Pizza
+</button>
+</div>
+
+</form>
+
+<div style="text-align: center;">
+<div class="login">
+
+<button onclick="window.location.href='stampa_pizza.php'">Visualizza Pizze</button>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
+

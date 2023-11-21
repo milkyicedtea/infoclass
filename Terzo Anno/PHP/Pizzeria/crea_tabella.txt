@@ -1,0 +1,14 @@
+Create table tbl_pizze
+(Cod_cli    INT AUTO_INCREMENT PRIMARY KEY,
+ Cognome    Varchar (30),
+ Nome       Varchar (30),
+ Indirizzo  Varchar (50),
+ Citta      Varchar (30),
+ email      Varchar (30),
+ tipo       Varchar (20),
+ data_ins   date,
+ avviso     boolean);
+
+
+
+ 
