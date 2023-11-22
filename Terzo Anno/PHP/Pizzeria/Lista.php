@@ -18,16 +18,28 @@
     if (isset ($_POST['nome']))      {$nome=$_POST['nome'];}           else {$nome='';}
     if (isset ($_POST['cognome']))   {$cognome=$_POST['cognome'];}     else {$cognome='';}
     if (isset ($_POST['indirizzo'])) {$indirizzo=$_POST['indirizzo'];} else {$indirizzo ='';}
-    if (isset ($_POST['citta']))     {$citta=$_POST['citta'];}         else {$citta='';}
+//    if (isset ($_POST['citta']))     {$citta=$_POST['citta'];}         else {$citta='';}
     if (isset ($_POST['email']))     {$email=$_POST['email'];}         else {$email='';}
+    if (isset ($_POST['']))
 //    if (isset ($_POST['scelta']))    {$scelta=$_POST['scelta'];}       else {$scelta='';}
 //    if (isset ($_POST['avviso']))    {$avviso=$_POST['avviso'];}       else {$avviso='0';}
+
+    echo "
+        <div>
+            <label>
+                <select name='felpe'>
+                    <option>'Felpa'</option>
+                </select>
+            </label>
+        </div>
+    ";
+
 
     echo "Dati inseriti in tabella";
     echo "<p> Nome     : ". $nome."</p> ";
     echo "<p> Cognome  : ". $cognome."</p> ";
     echo "<p> Indirizzo: ". $indirizzo."</p> ";
-    echo "<p> Citta    : ". $citta."</p> ";
+//    echo "<p> Citta    : ". $citta."</p> ";
     echo "<p> Email    : ". $email."</p> ";
 //    echo "<p> Scelta   : ". $scelta."</p> ";
 //    echo "<p> Avviso   : ". $avviso."</p> ";
@@ -45,12 +57,10 @@
     }
 
 
-    $qu= ("insert into tbl_utente(Cod_cli,Cognome,Nome,Indirizzo,Citta,email,data_ins)
-        values (null,
-                '$cognome',
+    $qu= ("insert into tbl_utente(Cognome,Nome,Indirizzo,Citta,email,data_ins)
+        values ('$cognome',
                 '$nome',
                 '$indirizzo',
-                '$citta',
                 '$email',
                 now())");
 //                '$scelta',

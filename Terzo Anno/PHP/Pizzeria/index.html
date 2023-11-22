@@ -10,76 +10,117 @@
 
 
 <div class="container">
-<div class="card">
-	<div class="info">
-		<div style="text-align: center; align-items: center"><h1> Registrazione NewEgg </h1></div>
-		<form name="Registrazione NewEgg" action="Iscrizione.php" method="POST">
+	<div class="card">
+		<div class="info">
+			<div style="text-align: center; align-items: center"><h1> Creazione lista PC-PartPicker </h1></div>
+			<form name="PC-PartPicker" action="Lista.php" method="POST">
+				<h3> Nome </h3>
+				<label>
+					<input type="text" name="nome" maxlength="30" size="30" style="font-size:14px">
+				</label>
 
-		<h3> Nome </h3>
-		<label>
-			<input type="text" name="nome" maxlength="30" size="30" style="font-size:14px">
-		</label>
+				<h3>Cognome </h3>
+				<label>
+					<input type="text" name="cognome" maxlength="30" size="30" style="font-size:14px">
+				</label>
 
-		<h3>Cognome </h3>
-		<label>
-			<input type="text" name="cognome" maxlength="30" size="30" style="font-size:14px">
-		</label>
+				<h3> Indirizzo </h3>
+				<label>
+					<input type="text" name="indirizzo" maxlength="50" size="30" style="font-size:14px">
+				</label>
 
-		<h3> Città </h3>
-			<label>
-			<input type="text" name="citta" maxlength="30" size="30" style="font-size:14px">
-		</label>
+				<h3> E-Mail </h3>
+				<label>
+					<input type="text" name="email" maxlength="30" size="30" style="font-size:14px">
+				</label>
 
-		<h3> Indirizzo </h3>
-		<label>
-			<input type="text" name="indirizzo" maxlength="50" size="30" style="font-size:14px">
-		</label>
+				<h3>Processore</h3>
+					<label>
+						<select name = 'scelta-cpu'>
+							<option>Ryzen 5 5600x</option>
+							<option>Ryzen 7 5700x3D</option>
+							<option>Ryzne 9 5800x3D</option>
+							<option>Ryzen 9 5950x</option>
+							<option>Core i5-13600K</option>
+							<option>Core i7-13700KF</option>
+							<option>Core i9-13900K</option>
+							<option>Core i9-13900KF</option>
+						</select>
+					</label>
 
-		<h3> E-Mail </h3>
-		<label>
-			<input type="text" name="email" maxlength="30" size="30" style="font-size:14px">
-		</label>
-<!--			<h3> Tipo Pizza </h3>-->
-<!--				<label>-->
-<!--					<select  name="scelta" style="font-size:14px">-->
-<!--						  <option>Bianca-->
-<!--						  <option>Rossa-->
-<!--						  <option>Margherita-->
-<!--						  <option>Diavola-->
-<!--						  <option>Quattro stagioni-->
-<!--					</select>-->
-<!--				</label>-->
-<!--		    <table bgcolor=red border=1>-->
-<!--			   -->
-<!--			    <th>Oggetti solo prova passaggio parametri </th>-->
+				<h3>Scheda video</h3>
+					<label>
+						<select name = 'scelta-gpu'>
+							<option>Rx 6600xt</option>
+							<option>Rx 6750xt</option>
+							<option>Rx 6800xt</option>
+							<option>Rx 6950xtx</option>
+							<option>Rtx 3060ti</option>
+							<option>Rtx 3070ti</option>
+							<option>Rtx 3080ti</option>
+							<option>Rtx 3090ti</option>
+						</select>
+					</label>
+				<h3>Scheda madre</h3>
+					<label>
+						<select name = 'scelta-mobo'>
+							<option>ROG STRIX AMD (X570)</option>
+							<option>ROG STRIX Intel (Z790)</option>
+							<option>Msi AMD (X570)</option>
+							<option>Msi Intel (Z790)</option>
+						</select>
+					</label>
+				<h3>Ram</h3>
+					<label>
+						<select name = 'scelta-ram'>
+							<option>16gb DDR4</option>
+							<option>32gb DDR4</option>
+							<option>64gb DDR4</option>
+							<option>128gb DDR4</option>
+						</select>
+					</label>
 
-<!--				<tr>-->
-<!--					<td>-->
-<!--						<label>-->
-<!--							<input type="checkbox" name="tipocheck[]" value="bianca">-->
-<!--						</label>&nbsp;Bianca-->
-<!--						<label>-->
-<!--							<input type="checkbox" name="tipocheck[]" value="rossa">-->
-<!--						</label>&nbsp;Rossa-->
-<!--						<label>-->
-<!--							<input type="checkbox" name="tipocheck[]" value="Mozzarella">-->
-<!--						</label>&nbsp;Mozzarella-->
-<!--						<label>-->
-<!--							<input type="radio" name="quality" value="d">-->
-<!--						</label>&nbsp;Dietetica-->
-<!--						<label>-->
-<!--							<input type="radio" name="quality" value="g">-->
-<!--						</label>&nbsp;Ghiotta-->
-<!--					</td>-->
-<!--				</tr>-->
-<!--			</table>-->
+	<!--			<h3> Tipo Pizza </h3>-->
+	<!--				<label>-->
+	<!--					<select  name="scelta" style="font-size:14px">-->
+	<!--						  <option>Bianca-->
+	<!--						  <option>Rossa-->
+	<!--						  <option>Margherita-->
+	<!--						  <option>Diavola-->
+	<!--						  <option>Quattro stagioni-->
+	<!--					</select>-->
+	<!--				</label>-->
+	<!--		    <table bgcolor=red border=1>-->
+	<!--			   -->
+	<!--			    <th>Oggetti solo prova passaggio parametri </th>-->
 
-			<div style="text-align: center;">
-				<button onClick="window.location.href='Iscrizione.php'">Iscriviti</button>
-			</div>
-		</form>
+	<!--				<tr>-->
+	<!--					<td>-->
+	<!--						<label>-->
+	<!--							<input type="checkbox" name="tipocheck[]" value="bianca">-->
+	<!--						</label>&nbsp;Bianca-->
+	<!--						<label>-->
+	<!--							<input type="checkbox" name="tipocheck[]" value="rossa">-->
+	<!--						</label>&nbsp;Rossa-->
+	<!--						<label>-->
+	<!--							<input type="checkbox" name="tipocheck[]" value="Mozzarella">-->
+	<!--						</label>&nbsp;Mozzarella-->
+	<!--						<label>-->
+	<!--							<input type="radio" name="quality" value="d">-->
+	<!--						</label>&nbsp;Dietetica-->
+	<!--						<label>-->
+	<!--							<input type="radio" name="quality" value="g">-->
+	<!--						</label>&nbsp;Ghiotta-->
+	<!--					</td>-->
+	<!--				</tr>-->
+	<!--			</table>-->
+
+				<div style="text-align: center;">
+					<button onClick="window.location.href='Iscrizione.php'">Iscriviti</button>
+				</div>
+			</form>
+		</div>
 	</div>
-</div>
 </div>
 </body>
 </html>
