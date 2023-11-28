@@ -2,7 +2,12 @@
 <head>
     <title>Iscriviti</title>
 </head>
-
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
 <body>
 <?php
    /* if (isset ($_POST['tipocheck']))
@@ -15,72 +20,99 @@
      }
     }*/
 
-    if (isset ($_POST['nome']))      {$nome=$_POST['nome'];}           else {$nome='';}
-    if (isset ($_POST['cognome']))   {$cognome=$_POST['cognome'];}     else {$cognome='';}
-    if (isset ($_POST['indirizzo'])) {$indirizzo=$_POST['indirizzo'];} else {$indirizzo ='';}
-//    if (isset ($_POST['citta']))     {$citta=$_POST['citta'];}         else {$citta='';}
-    if (isset ($_POST['email']))     {$email=$_POST['email'];}         else {$email='';}
-    if (isset ($_POST['']))
-//    if (isset ($_POST['scelta']))    {$scelta=$_POST['scelta'];}       else {$scelta='';}
-//    if (isset ($_POST['avviso']))    {$avviso=$_POST['avviso'];}       else {$avviso='0';}
+    if (isset ($_POST['nome']))
+        {$nome=$_POST['nome'];}
+    else {$nome='';}
+    if (isset ($_POST['cognome']))
+        {$cognome=$_POST['cognome'];}
+    else {$cognome='';}
+    if (isset ($_POST['email']))
+        {$email=$_POST['email'];}
+    else {$email='';}
+    if (isset ($_POST['scelta-cpu']))
+        {$scelta_cpu=$_POST['scelta-cpu'];}
+    else {$scelta_cpu='';}
+    if (isset ($_POST['scelta-gpu']))
+        {$scelta_gpu=$_POST['scelta-gpu'];}
+    else {$scelta_gpu='';}
+    if (isset ($_POST['scelta-mobo']))
+        {$scelta_mobo=$_POST['scelta-mobo'];}
+    else {$scelta_mobo='';}
+    if (isset ($_POST['scelta-ram']))
+        {$scelta_ram=$_POST['scelta-ram'];}
+    else {$scelta_ram='';}
+
 
     echo "
-        <div>
-            <label>
-                <select name='felpe'>
-                    <option>'Felpa'</option>
-                </select>
-            </label>
-        </div>
+    <div>
+        <table>
+            <th>Valori inseriti in tabella</th>
+            <tr>
+                <td>$nome</td>
+                <td>$cognome</td>
+                <td>$email</td>
+                <td>$scelta_cpu</td>
+                <td>$scelta_gpu</td>
+                <td>$scelta_mobo</td>
+                <td>$scelta_ram</td>
+            </tr>
+        </table>
+    </div>
     ";
 
-
-    echo "Dati inseriti in tabella";
-    echo "<p> Nome     : ". $nome."</p> ";
-    echo "<p> Cognome  : ". $cognome."</p> ";
-    echo "<p> Indirizzo: ". $indirizzo."</p> ";
-//    echo "<p> Citta    : ". $citta."</p> ";
-    echo "<p> Email    : ". $email."</p> ";
-//    echo "<p> Scelta   : ". $scelta."</p> ";
-//    echo "<p> Avviso   : ". $avviso."</p> ";
-
-    $db_host = "127.0.0.1";
+    $db_host = "localhost";
     $db_user = "root";
     $db_password = "";     //rootroot per btnami
-    $db_database = "pizzeria";
+    $db_database = "partpicker";
 
     $connessione=mysqli_connect($db_host,$db_user,$db_password,$db_database);
 
     if (!$connessione)
     {
-    die('Attenzione non connesso: ' . mysqli_error());
+        die('Attenzione, non connesso: '.mysqli_error($connessione));
     }
 
+    $insert_utente=("
+        insert into partpicker.utente(nome, cognome, email)
+        VALUES ($nome, $cognome, $email);
+    ");
 
-    $qu= ("insert into tbl_utente(Cognome,Nome,Indirizzo,Citta,email,data_ins)
-        values ('$cognome',
-                '$nome',
-                '$indirizzo',
-                '$email',
-                now())");
-//                '$scelta',
-//                '$avviso')");
-									 
-    $risultato = mysqli_query($connessione,$qu);
+    mysqli_query(
+            $connessione,
+            $insert_utente
+    );
 
-    if(!$risultato)
+    $utente=mysqli_query(
+            $connessione,
+            "select count(id_utente) from partpicker.utente;"
+    );
+
+    $utente=mysqli_fetch_array($utente);
+
+    echo"$utente[0]";
+
+    $insert_risultato=("
+        insert into partpicker.lista(processore, scheda_video, scheda_madre, ram, id_utente) 
+        VALUES ('$scelta_cpu', '$scelta_gpu', '$scelta_mobo', '$scelta_ram', $utente[0];)"
+    );
+
+    if(!mysqli_query($connessione,$insert_risultato))
     {
-        echo("Errore: " . mysqli_error($connessione));
+        echo("Errore: ".mysqli_error($connessione));
     }
     else
     {
-        echo "<p>******************************</p>";
-        echo "<br>";
-        echo "Iscrizione a Nike effettuata con successo!";
+        echo "
+        <div>
+            <p>******************************</p>
+            <p>Lista creata con successo!</p>
+        </div>";
     }
 
     mysqli_close($connessione);
 ?>
-    <a href="NEW/index.html">Torna alla home</a>
+    <p>
+        <a href="index.html">Torna alla home</a>
+    </p>
 </body>
 </html>
