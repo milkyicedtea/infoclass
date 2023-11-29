@@ -46,7 +46,7 @@ table, th, td {
     echo "
     <div>
         <table>
-            <th>Valori inseriti in tabella</th>
+            Valori inseriti
             <tr>
                 <td>$nome</td>
                 <td>$cognome</td>
@@ -73,40 +73,44 @@ table, th, td {
     }
 
     $insert_utente=("
-        insert into partpicker.utente(nome, cognome, email)
-        VALUES ($nome, $cognome, $email);
-    ");
+            insert into partpicker.utente(nome, cognome, email)
+            VALUES ($nome, $cognome, $email);
+        ");
 
-    mysqli_query(
-            $connessione,
-            $insert_utente
-    );
+    if ($connessione->query($insert_utente) === true)
+    {
+        $insert_utente = false;
+        echo("Errore: ".mysqli_error($connessione));
+    }
+    else {$insert_utente = true;}
 
-    $utente=mysqli_query(
-            $connessione,
+    $select_utente = (
             "select count(id_utente) from partpicker.utente;"
     );
 
-    $utente=mysqli_fetch_array($utente);
+    $select_risultato = $connessione->query($select_utente);
 
-    echo"$utente[0]";
+    echo"$select_risultato[0]";
 
     $insert_risultato=("
         insert into partpicker.lista(processore, scheda_video, scheda_madre, ram, id_utente) 
-        VALUES ('$scelta_cpu', '$scelta_gpu', '$scelta_mobo', '$scelta_ram', $utente[0];)"
+        VALUES ('$scelta_cpu', '$scelta_gpu', '$scelta_mobo', '$scelta_ram', $select_risultato[0])"
     );
 
-    if(!mysqli_query($connessione,$insert_risultato))
+    if($connessione->query($insert_risultato))
     {
         echo("Errore: ".mysqli_error($connessione));
     }
     else
     {
-        echo "
-        <div>
-            <p>******************************</p>
-            <p>Lista creata con successo!</p>
-        </div>";
+        if ($insert_utente)
+        {
+            echo "
+            <div>
+                <p>******************************</p>
+                <p>Lista creata con successo!</p>
+            </div>";
+        }
     }
 
     mysqli_close($connessione);
