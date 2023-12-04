@@ -11,7 +11,7 @@
     $db_host = "127.0.0.1";
     $db_user = "root";
     $db_password = "";          //rootroot   per btnami
-    $db_database = "pizzeria";
+    $db_database = "partpicker";
 
     $connessione=mysqli_connect($db_host,$db_user,$db_password,$db_database );
 
@@ -20,15 +20,9 @@
         die('Attenzione non connesso: ' . mysqli_error($connessione));
     }
 
-    $qu = "select cognome, nome, citta, tipo, email from tbl_pizze";
+    $qu = ("select id_utente, nome, cognome, email from utente");
 	
 	$risultato = mysqli_query($connessione,$qu);
-
-    $Cognome = 'awdawda';
-    $Nome = 'awdaadd';
-    $Citta = 'awdad';
-    $Tipo = 'awdadda';
-    $Email= 'awd';
 
     //aggiungere un campo per ogni componente
     echo "

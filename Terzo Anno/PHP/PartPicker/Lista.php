@@ -74,30 +74,32 @@ table, th, td {
 
     $insert_utente=("
             insert into partpicker.utente(nome, cognome, email)
-            VALUES ($nome, $cognome, $email);
+            VALUES ('$nome', '$cognome', '$email')
         ");
 
-    if ($connessione->query($insert_utente) === true)
-    {
-        $insert_utente = false;
-        echo("Errore: ".mysqli_error($connessione));
-    }
-    else {$insert_utente = true;}
+    $connessione->query($insert_utente) === true;
 
     $select_utente = (
-            "select count(id_utente) from partpicker.utente;"
+        "select count(id_utente) as id_utente from partpicker.utente;"
     );
 
     $select_risultato = $connessione->query($select_utente);
 
-    echo"$select_risultato[0]";
+    if ($select_risultato->num_rows > 0){
+        while ($row=$select_risultato->fetch_assoc()){
+            $insert_to_utente = $row['id_utente'];
+        }
+    }
+    else $insert_to_utente = 1;
 
-    $insert_risultato=("
+    echo $insert_to_utente;
+
+$insert_risultato=("
         insert into partpicker.lista(processore, scheda_video, scheda_madre, ram, id_utente) 
-        VALUES ('$scelta_cpu', '$scelta_gpu', '$scelta_mobo', '$scelta_ram', $select_risultato[0])"
+        VALUES ('$scelta_cpu', '$scelta_gpu', '$scelta_mobo', '$scelta_ram', '$insert_to_utente')"
     );
 
-    if($connessione->query($insert_risultato))
+    if(!($connessione->query($insert_risultato)))
     {
         echo("Errore: ".mysqli_error($connessione));
     }
