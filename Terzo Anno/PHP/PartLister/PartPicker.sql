@@ -16,5 +16,4 @@ create table if not exists lista(
     `ram` varchar(20),
     `id_utente` int,
     foreign key(id_utente) REFERENCES utente(id_utente)
-
 );
