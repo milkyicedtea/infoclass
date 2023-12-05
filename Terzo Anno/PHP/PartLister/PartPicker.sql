@@ -1,11 +1,11 @@
-create schema if not exists partpicker;
-use partpicker;
+create schema if not exists partlister;
+use partlister;
 
 create table if not exists utente(
      `id_utente` int not null auto_increment,
-     `nome` varchar(20),
-     `cognome` varchar(20),
-     `email` varchar(40),
+     `username` varchar(50) not null,
+     `password` varchar(255) not null,
+     `email` varchar(50) not null,
      primary key(id_utente)
 );
 

@@ -3,7 +3,7 @@
     const db_host = 'localhost';
     const db_username = 'root';
     const db_password = '';
-    const db_databse = 'partpicker';
+    const db_databse = 'partlister';
 
     // MySQLi connection
     $conn = mysqli_connect(db_host,db_username,db_password,db_databse);
@@ -18,7 +18,7 @@
         exit('Riempire tutti i campi.');
     }
 
-    if ($stmt = $conn->prepare('select id_utente, password from partpicker.utente where username = ?')){
+    if ($stmt = $conn->prepare('select id_utente, password from partlister.utente where username = ?')){
         // Bind parameters (s = string, i = int, etc)
         $stmt->bind_param('s', $_POST['username']);
         $stmt->execute();
@@ -36,15 +36,6 @@
                 $_SESSION['loggedin'] = TRUE;
                 $_SESSION['name'] = $_POST['username'];
                 $_SESSION['id'] = $id_db;
-//                echo "<script>
-//                      function sleep(ms){
-//                          return new Promise(resolve=>setTimeout(resolve, ms));
-//                      }
-//                      </script>
-//                      <script>if (alert('Welcome ". $_SESSION['name']. "! Click ok to be redirected to the home page!')){
-//                          window.location.assign('home.php')
-//                      }
-//                      </script>";
                 header('location: home.php');
             }
             else

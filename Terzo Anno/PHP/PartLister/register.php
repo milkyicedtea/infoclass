@@ -2,7 +2,7 @@
     const db_host = 'localhost';
     const db_username = 'root';
     const db_password = '';
-    const db_databse = 'partpicker';
+    const db_databse = 'partlister';
 
     // MySQLi connection
     $conn = mysqli_connect(db_host,db_username,db_password,db_databse);
@@ -31,7 +31,7 @@
         exit('La lunghezza della password deve essere compresa tra 5 e 255 caratteri.');
     }
 
-    if ($stmt = $conn->prepare('select id_utente, password from partpicker.utente where username = ?')){
+    if ($stmt = $conn->prepare('select id_utente, password from partlister.utente where username = ?')){
         // Bind parameters (s = string, i = int, etc)
         $stmt->bind_param('s', $_POST['username']);
         $stmt->execute();
@@ -47,8 +47,8 @@
                 $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
                 $stmt->bind_param('sss', $_POST['username'], $password, $_POST['email']);
                 $stmt->execute();
-                echo "<script>alert('You are now successfully registered! You will be redirected to the login page in 5 seconds.')</script>";
-                header('Refresh: 5; URL = login.html');
+//                echo "<script>alert('You are now successfully registered! You will be redirected to the login page in 5 seconds.')</script>";
+                header('location: login.html');
             }
             else {
                 // Insert error

@@ -9,7 +9,7 @@
     const db_host = 'localhost';
     const db_username = 'root';
     const db_password = '';
-    const db_databse = 'partpicker';
+    const db_databse = 'partlister';
 
     // MySQLi connection
     $conn = mysqli_connect(db_host,db_username,db_password,db_databse);
@@ -18,7 +18,7 @@
         exit('Failed to connect to MySQL: ' . mysqli_connect_error());
     }
 
-    $stmt = $conn->prepare('SELECT password, email FROM utente WHERE id_utente = ?');
+    $stmt = $conn->prepare('select password, email from utente where id_utente = ?');
 
     $stmt->bind_param('i', $_SESSION['id']);
     $stmt->execute();
