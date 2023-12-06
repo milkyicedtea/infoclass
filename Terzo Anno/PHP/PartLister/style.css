@@ -9,6 +9,36 @@ body {
   	margin: 0;
 }
 
+/* lists styling */
+.register-login select {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #3274d6;
+    background-color: #ffffff;
+    color: #333;
+    padding: 0 10px;
+    border-radius: 5px;
+    appearance: none;
+	display: flex;
+	text-align: center;
+	flex-direction: column;
+	margin-bottom: 10px;
+}
+
+.register-login select::-ms-expand {
+    display: none;
+}
+
+.register-login select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    color: #333;
+    pointer-events: none;
+}
+
 /* register and login styling */
 .register-login {
   	width: 400px;
@@ -112,6 +142,20 @@ body {
 .navtop div a i {
 	padding: 2px 8px 0 0;
 }
+.content a i {
+	padding: 2px 8px 0 0;
+	text-decoration: none;
+	color: inherit;
+}
+
+.content a {
+	color:inherit;
+	text-decoration: none;
+}
+.content a:hover {
+	text-decoration: underline;
+}
+
 .navtop div a:hover {
 	color: #eaebed;
 }
@@ -146,4 +190,77 @@ body.loggedin {
 .content > div p {
 	padding: 5px;
 	margin: 0 0 10px 0;
+}
+
+/* profile and list styling */
+.profile-list {
+    width: 400px;
+    background-color: #ffffff;
+    box-shadow: 0 0 9px 0 #0000004C;
+    margin: 100px auto;
+}
+
+.profile-list h1 {
+    text-align: center;
+    color: #5b6574;
+    font-size: 24px;
+    padding: 20px 0 20px 0;
+    border-bottom: 1px solid #dee0e4;
+}
+
+.profile-list a {
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+    background-color: #3274d6;
+    color: #ffffff;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.profile-list a:hover {
+    background-color: #2868c7;
+    transition: background-color 0.2s;
+}
+
+.profile-list form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.profile-list form label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #3274d6;
+    color: #ffffff;
+}
+
+.profile-list form select {
+    width: 310px;
+    height: 50px;
+    border: 1px solid #dee0e4;
+    margin-bottom: 20px;
+    padding: 0 15px;
+}
+
+.profile-list form button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    background-color: #3274d6;
+    border: 0;
+    cursor: pointer;
+    font-weight: bold;
+    color: #ffffff;
+    transition: background-color 0.2s;
+}
+
+.profile-list form button:hover {
+    background-color: #2868c7;
+    transition: background-color 0.2s;
 }

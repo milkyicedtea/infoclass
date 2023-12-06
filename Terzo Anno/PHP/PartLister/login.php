@@ -41,11 +41,11 @@
             else
             {
                 // Password erraata
-                echo "<script>alert('Incorrect password!');location.href = 'login.php';}</script>";
+                echo "<script>alert('Incorrect password!');location.href = 'login.html';}</script>";
             }
         }
         else {
-            echo "<script>alert('Incorrect username or the account does not exist');location.href = 'login.php'</script>";
+            echo "<script>alert('Incorrect username or the account does not exist');location.href = 'login.html'</script>";
         }
 
         $stmt->close();

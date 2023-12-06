@@ -39,8 +39,10 @@
 		<nav class="navtop">
 			<div>
 				<h1>Website Title</h1>
-				<a href="profile.php"><i class="fas fa-user-circle"></i>Profile</a>
-				<a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
+                <a href="lists.php"><i class="fas fa-list-ul"></i>Your Lists</a>
+                <a href="profile.php"><i class="fas fa-user-circle"></i>Profile</a>
+                <a href="home.php"><i class="fas fa-home"></i>Back to home</a>
+                <a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
 			</div>
 		</nav>
 		<div class="content">

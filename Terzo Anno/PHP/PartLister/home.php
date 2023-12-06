@@ -29,7 +29,8 @@
 			<p>Welcome back, <?=$_SESSION['name']?>!</p>
 		</div>
         <div class="content">
-
+            <h2>Your lists</h2>
+            <p><a href="lists.php"><i class="fas fa-list-ul"></i>List page</a></p>
         </div>
 	</body>
 </html>
