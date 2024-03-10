@@ -1,0 +1,156 @@
+* {
+	-webkit-user-drag: none;
+	user-select: none;
+	box-sizing: border-box;
+	font-family:
+		-apple-system,
+		BlinkMacSystemFont,
+		"segoe ui",
+		roboto,
+		oxygen,
+		ubuntu,
+		cantarell,
+		"fira sans",
+		"droid sans",
+		"helvetica neue",
+		Arial,
+		sans-serif;
+	font-size: 16px;
+}
+
+body.home {
+	color: white;
+	background-color: #121212;
+	margin: 0;
+}
+
+.nav-top {
+	background-color: #1e1e1e;
+	box-shadow: 0 .25rem .125rem rgba(0, 0, 0, 0.1);
+	height: 3.75rem;
+	width: 100%;
+	border: 0;
+}
+
+.nav-top div {
+	display: flex;
+	padding: 0 1rem;
+	width: 100%;
+	height: 100%;
+}
+
+.nav-top h1 {
+	display: inline-flex;
+	align-items: center;
+	flex: 1;
+	font-size: 1.5rem;
+	padding: 0;
+	margin: 0;
+	color: #eaebed;
+	font-weight: normal;
+}
+
+.nav-top h1 i {
+	display: inline-flex;
+	flex: 1;
+	align-items: end;
+	padding: .5rem .5rem 0 .5rem;
+}
+
+.nav-top a,
+.nav-top p {
+	display: inline-flex;
+	align-items: center;
+	padding: 0 1.25rem;
+	text-decoration: none;
+	color: #c1c4c8;
+	font-weight: bold;
+}
+
+.nav-top i {
+	padding: .125rem .5rem 0 0;
+}
+
+.nav-top a:hover {
+	color: #eaebed;
+}
+
+.main-div {
+	text-decoration: none;
+	padding: 0 1rem;
+	color: inherit;
+}
+
+.featured-games {
+	text-align: center;
+	padding-bottom: 1rem;
+	margin: .75rem;
+	font-size: 2rem
+}
+
+.games-section {
+	display: grid;
+	grid-template-columns: 33% 33% 33%;
+	justify-content: center;
+}
+
+.game {
+	place-self: center;
+	max-width: 70%;
+	display: grid;
+	margin: .50rem 0; /* Y, X */
+}
+
+.game:before {
+	display: block;
+	height: 100%;
+	vertical-align: middle;
+	margin-right: -0.25em; /* Adjust this value as needed */
+}
+
+.game-card {
+	/*width: 30%;*/
+	/*margin-bottom: calc(20 * (1rem/16));*/
+	transition: transform .2s;
+	background-color: #ffffff;
+	border-radius: .5rem;
+	box-shadow: 0 calc(2 * (1rem/16)) .25rem rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+	text-align: center;
+}
+
+.game-card:hover {
+	transform: scale(110%);
+}
+
+.game-card img {
+	width: 100%;
+
+	object-fit: cover;
+}
+
+.game-card h3 {
+	padding: calc(5 * (1rem/16));
+	margin: 0;
+	color: #333333;
+	vertical-align: center;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.game-card a {
+	text-decoration: none;
+	user-select: none;
+	-webkit-user-drag: none;
+}
+
+footer {
+	background-color: #333333;
+	color: #ffffff;
+	text-align: center;
+	padding: calc(10 * (1rem/16));
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}

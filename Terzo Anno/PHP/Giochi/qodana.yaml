@@ -1,0 +1,19 @@
+version: 1.0
+profile:
+  name: qodana.recommended
+
+linter: jetbrains/qodana-php:latest
+include:
+  - name: PhpInconsistentReturnPointsInspection
+  - name: PhpRedundantOptionalArgumentInspection
+  - name: PhpTernaryExpressionCanBeReplacedWithConditionInspection
+  - name: PhpFullyQualifiedNameUsageInspection
+  - name: PhpUnnecessaryFullyQualifiedNameInspection
+  - name: DuplicatedCode
+  - name: PhpReturnDocTypeMismatchInspection
+  - name: PhpMissingParamTypeInspection
+  - name: PhpMissingFieldTypeInspection
+  - name: PhpMissingReturnTypeInspection
+  - name: PhpDynamicFieldDeclarationInspection
+  - name: PhpUnusedAliasInspection
+  - name: PhpUnusedLocalVariableInspection
