@@ -91,25 +91,26 @@ body.home {
 .games-section {
 	display: grid;
 	grid-template-columns: 33% 33% 33%;
+	grid-gap: 0;
 	justify-content: center;
 }
 
 .game {
 	place-self: center;
-	max-width: 70%;
+	max-width: 65%;
 	display: grid;
-	margin: .50rem 0; /* Y, X */
+	margin: .25rem 0; /* Y, X */
 }
 
 .game:before {
 	display: block;
 	height: 100%;
 	vertical-align: middle;
-	margin-right: -0.25em; /* Adjust this value as needed */
+	/*margin-right: -0.25em; !* Adjust this value as needed *!*/
 }
 
 .game-card {
-	/*width: 30%;*/
+	width: 100%;
 	/*margin-bottom: calc(20 * (1rem/16));*/
 	transition: transform .2s;
 	background-color: #ffffff;
@@ -125,7 +126,6 @@ body.home {
 
 .game-card img {
 	width: 100%;
-
 	object-fit: cover;
 }
 
