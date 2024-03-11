@@ -14,7 +14,7 @@
 		<meta charset="UTF-8">
 		<title>Paper Lily - Chapter 1</title>
 		<link rel="icon" type="image/x-icon" href="../Assets/favicon.ico">
-		<link rel="stylesheet" type="text/css" href="../CSS/gameStyles.css">
+		<link rel="stylesheet" type="text/css" href="../CSS/paperLily.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 	</head>
@@ -51,7 +51,7 @@
 						Lacie al Faro e può fornire oggetti utili al giocatore in cambio di rune
 						collezionabili durante il gioco"
 					>
-						<img src="../Assets/PaperLily/Rune.png" alt="Lacie" draggable="false">
+						<img src="../Assets/PaperLily/Rune.png" alt="Rune" draggable="false">
 						<h3>Rune</h3>
 					</div>
 				</div>
@@ -82,7 +82,7 @@
 						 non si sa molto di lui nel capitolo, anche se le sue azioni e la sua personalità
 						 la dicono lunga sul suo personaggio."
 					>
-						<img src="../Assets/PaperLily/Sai.png" alt="Lacie" draggable="false">
+						<img src="../Assets/PaperLily/Sai.png" alt="Sai" draggable="false">
 						<h3>Sai</h3>
 						<p>
 
@@ -99,7 +99,7 @@
 						noto per la sua abilità con i coltelli. Il suo ruolo chiave nella trama aggiunge
 						mistero, rivelando vari segreti intricati legati al mondo del gioco."
 					>
-						<img src="../Assets/PaperLily/Miss_Knives.png" alt="Lacie" draggable="false">
+						<img src="../Assets/PaperLily/Miss_Knives.png" alt="Miss Knives" draggable="false">
 						<h3>Miss Knives</h3>
 					</div>
 				</div>
