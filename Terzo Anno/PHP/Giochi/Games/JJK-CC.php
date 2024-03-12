@@ -35,12 +35,12 @@
     </nav>
 
     <div class="main-div">
-        <h2 class="game-title">Paper Lily - Chapter 1</h2>
+        <h2 class="game-title">Jujutsu Kaisen Cursed Clash</h2>
         <p class="game-intro">
 				<span class="italic">
-					"Paper Lily è un gioco horror RPG in cui puoi risolvere enigmi in diversi modi.
-					Esplora un mondo nascosto, incontra strani personaggi e guida Lacie mentre cerca
-					di trovare risposte sulla sua insolita condizione."
+					"In questo gioco d'azione 2 contro 2, patrai padornoggiare le tecniche
+                    di più di 15 potenti stregoni delle arti occulte! Scegli il tuo partner e
+                    crea combinazioni uniche che rispecchino il tuo stile di gioco"
 				</span>
         </p>
 
@@ -55,7 +55,7 @@
 						collezionabili durante il gioco"
                 >
                     <img src="../Assets/JujutsuKaisen/Nobara-Kugisaki.png" alt="Nobara Kugisaki" draggable="false">
-                    <h3>Rune</h3>
+                    <h3>Nobara Kugisaki</h3>
                 </div>
             </div>
 
@@ -69,7 +69,7 @@
 						 mondo dove cerca una cura per la sua condizione anormale."
                 >
                     <img src="../Assets/JujutsuKaisen/Yuji-Itadori.png" alt="Yuji Itadori" draggable="false">
-                    <h3>Lacie</h3>
+                    <h3>Yuji Itadori</h3>
                     <p>
 
                     </p>
@@ -86,7 +86,7 @@
 						 la dicono lunga sul suo personaggio."
                 >
                     <img src="../Assets/JujutsuKaisen/Satoru-Gojo.png" alt="Satoru Gojo" draggable="false">
-                    <h3>Sai</h3>
+                    <h3>Satoru Gojo</h3>
                     <p>
 
                     </p>
@@ -102,8 +102,8 @@
 						noto per la sua abilità con i coltelli. Il suo ruolo chiave nella trama aggiunge
 						mistero, rivelando vari segreti intricati legati al mondo del gioco."
                 >
-                    <img src="../Assets/JujutsuKaisen/Mahito" alt="Mahito" draggable="false">
-                    <h3>Miss Knives</h3>
+                    <img src="../Assets/JujutsuKaisen/Mahito.png" alt="Mahito" draggable="false">
+                    <h3>Mahito</h3>
                 </div>
             </div>
 
