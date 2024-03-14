@@ -1,3 +1,8 @@
+@font-face {
+	font-family: "Paper Bow";
+	src: url("../Assets/PaperLily/Fonts/Easy listening.otf");
+}
+
 * {
 	opacity: 0;
 	animation: fadeIn 1.5s ease-in-out forwards;
@@ -18,13 +23,33 @@
 		Arial,
 		sans-serif;
 	font-size: 16px;
+	/* Hide scrollbars	*/
+	-ms-overflow-style: none;
+	scrollbar-width: none;
 }
 
-body.home {
-	color: white;
-	background: url("../Assets/PaperLily/PaperLily-Background.jpg") fixed center no-repeat;
+*::-webkit-scrollbar {
+	display: none;
+}
+
+body {
+	background-image: url("../Assets/PaperLily/PaperLily-Background.jpg");
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
 	background-size: cover;
+	color: #ffffff;
 	margin: 0;
+}
+
+body::before {
+	content: "";
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
 }
 
 @keyframes fadeIn {
@@ -34,15 +59,6 @@ body.home {
 	to {
 		opacity: 1;
 	}
-}
-
-.glass-tint {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: rgba(0, 0, 0, 0.5); /* Adjust the alpha (last) value for darkness */
 }
 
 .nav-top {
@@ -99,6 +115,7 @@ body.home {
 .main-div {
 	text-decoration: none;
 	padding: 0 1rem;
+	margin-bottom: 4rem;
 	color: inherit;
 	text-align: center;
 }
@@ -111,6 +128,8 @@ body.home {
 	background-clip: text;
 	-webkit-text-fill-color: transparent;
 	display: inline-block;
+	font-family: "Paper Bow", serif;
+	font-weight: bold;
 }
 
 .game-intro {
@@ -137,7 +156,7 @@ body.home {
 .character {
 	place-self: center;
 	max-width: 60%;
-	aspect-ratio: 9/14.75;
+	aspect-ratio: 9/14.25;
 	display: grid;
 	/*margin: .50rem 0; !* Y, X *!*/
 }
@@ -147,6 +166,34 @@ body.home {
 	vertical-align: middle;
 	padding: 0;
 	margin-right: 0.1rem; /* Adjust this value as needed */
+}
+
+/* Define a breakpoint for smaller screens */
+@media screen and (max-width: 1200px) {
+	.characters-section {
+		grid-template-columns: repeat(2, 50%);
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+
+	.character {
+		max-width: 80%;
+		margin: 1rem auto;
+	}
+}
+
+/* Define a breakpoint for even smaller screens */
+@media screen and (max-width: 480px) {
+	.characters-section {
+		grid-template-columns: 100%;
+		margin-left: 2%;
+		margin-right: 2%;
+	}
+
+	.character {
+		max-width: 90%;
+		margin: 1rem auto;
+	}
 }
 
 .character-card {
@@ -177,9 +224,13 @@ body.home {
 }
 
 .character-card h3 {
-	padding: .25rem;
+	place-self: center;
+	vertical-align: center;
+	padding-top: .25rem;
 	margin: 0;
 	color: #ffffff;
+	font-size: 1.5rem;
+	font-family: "Paper Bow", serif;
 }
 
 .character-card::before {

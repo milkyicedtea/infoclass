@@ -19,7 +19,6 @@
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 	</head>
 	<body class = "home">
-	<div class="glass-tint">
 		<nav class = "nav-top">
 			<div>
 				<h1>GameHaven <i class="material-symbols-outlined">stadia_controller</i></h1>
@@ -33,12 +32,10 @@
 
 		<div class="main-div">
 			<h2 class="game-title">Paper Lily - Chapter 1</h2>
-			<p class="game-intro">
-				<span class="italic">
-					"Paper Lily è un gioco horror RPG in cui puoi risolvere enigmi in diversi modi.
-					Esplora un mondo nascosto, incontra strani personaggi e guida Lacie mentre cerca
-					di trovare risposte sulla sua insolita condizione."
-				</span>
+			<p class="game-intro italic">
+				"Paper Lily è un gioco horror RPG in cui puoi risolvere enigmi in diversi modi.
+				Esplora un mondo nascosto, incontra strani personaggi e guida Lacie mentre cerca
+				di trovare risposte sulla sua insolita condizione."
 			</p>
 
 			<section class="characters-section">
@@ -67,9 +64,6 @@
 					>
 						<img src="../Assets/PaperLily/Lacie.png" alt="Lacie" draggable="false">
 						<h3>Lacie</h3>
-						<p>
-
-						</p>
 					</div>
 				</div>
 
@@ -84,9 +78,6 @@
 					>
 						<img src="../Assets/PaperLily/Sai.png" alt="Sai" draggable="false">
 						<h3>Sai</h3>
-						<p>
-
-						</p>
 					</div>
 				</div>
 
@@ -106,7 +97,6 @@
 
 			</section>
 		</div>
-	</div>
 
 		<footer>
 			&copy; 2024 GameHaven. All rights reserved.

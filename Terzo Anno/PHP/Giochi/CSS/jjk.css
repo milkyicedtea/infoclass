@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Jujutsu Kaisen';
+    src: url("../Assets/JujutsuKaisen/Fonts/JujutsuKaisen.ttf");
+}
+
 * {
     opacity: 0;
     animation: fadeIn 1.5s ease-in-out forwards;
@@ -5,26 +10,46 @@
     user-select: none;
     box-sizing: border-box;
     font-family:
-            -apple-system,
-            BlinkMacSystemFont,
-            "segoe ui",
-            roboto,
-            oxygen,
-            ubuntu,
-            cantarell,
-            "fira sans",
-            "droid sans",
-            "helvetica neue",
-            Arial,
-            sans-serif;
+      -apple-system,
+      BlinkMacSystemFont,
+      "segoe ui",
+      roboto,
+      oxygen,
+      ubuntu,
+      cantarell,
+      "fira sans",
+      "droid sans",
+      "helvetica neue",
+      Arial,
+      sans-serif;
     font-size: 16px;
+    /* Hide scrollbars	*/
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
-body.home {
-    color: white;
-    background: url("../Assets/JujutsuKaisen/JujutsuKaisen-Background.jpg") fixed center no-repeat;
+*::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    background-image: url("../Assets/JujutsuKaisen/JujutsuKaisen-Background.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
+    color: #ffffff;
     margin: 0;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
 }
 
 @keyframes fadeIn {
@@ -34,15 +59,6 @@ body.home {
     to {
         opacity: 1;
     }
-}
-
-.glass-tint {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Adjust the alpha (last) value for darkness */
 }
 
 .nav-top {
@@ -99,6 +115,7 @@ body.home {
 .main-div {
     text-decoration: none;
     padding: 0 1rem;
+    margin-bottom: 4rem;
     color: inherit;
     text-align: center;
 }
@@ -107,10 +124,11 @@ body.home {
     padding: .5rem;
     margin: 0;
     font-size: 2rem;
-    background: #a757ec;
+    background: #cd4e64;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     display: inline-block;
+    font-family: "Jujutsu Kaisen", serif;
 }
 
 .game-intro {
@@ -137,7 +155,7 @@ body.home {
 .character {
     place-self: center;
     max-width: 60%;
-    aspect-ratio: 9/14.75;
+    aspect-ratio: 9/15.75;
     display: grid;
     /*margin: .50rem 0; !* Y, X *!*/
 }
@@ -149,10 +167,38 @@ body.home {
     margin-right: 0.1rem; /* Adjust this value as needed */
 }
 
+/* Define a breakpoint for smaller screens */
+@media screen and (max-width: 1200px) {
+    .characters-section {
+        grid-template-columns: repeat(2, 50%);
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .character {
+        max-width: 80%;
+        margin: 1rem auto;
+    }
+}
+
+/* Define a breakpoint for even smaller screens */
+@media screen and (max-width: 480px) {
+    .characters-section {
+        grid-template-columns: 100%;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+    .character {
+        max-width: 90%;
+        margin: 1rem auto;
+    }
+}
+
 .character-card {
     position: relative;
     transition: transform .2s;
-    background-color: #170e26;
+    background-color: #1d0d0e;
     border-radius: .5rem;
     box-shadow: 0 calc(2 * (1rem/16)) .25rem rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -164,9 +210,10 @@ body.home {
 }
 
 .character-card img {
+    /*vertical-align: bottom;*/
     width: 100%;
     object-fit: cover;
-    border: calc(1 * (1rem/16)) solid #ae85f0;
+    border: calc(1 * (1rem/16)) solid #cd4e64;
     border-radius: .5rem;
     filter: blur(0); /* Initial no blur */
     transition: filter 0.3s ease-in-out;
@@ -177,9 +224,13 @@ body.home {
 }
 
 .character-card h3 {
-    padding: .25rem;
+    place-self: center;
+    vertical-align: center;
+    padding-top: .25rem;
     margin: 0;
     color: #ffffff;
+    font-size: 1.5rem;
+    font-family: "Jujutsu Kaisen", serif;
 }
 
 .character-card::before {
@@ -191,7 +242,7 @@ body.home {
     margin-left: .5rem;
     margin-right: .5rem;
     background: rgba(0, 0, 0, 0.8);
-    border: calc(1 * (1rem/16)) solid #ae85f0;
+    border: calc(1 * (1rem/16)) solid #cd4e64;
     color: #ffffff;
     padding: .5rem;
     border-radius: .25rem;
