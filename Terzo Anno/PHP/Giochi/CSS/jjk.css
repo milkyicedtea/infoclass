@@ -255,6 +255,14 @@ body::before {
     opacity: 1;
 }
 
+iframe {
+    width: 70%;
+    aspect-ratio: 16/9;
+    margin: 1.5rem;
+    border-radius: 1rem;
+    border: calc(1 * (1rem/16)) solid #cd4e64;
+}
+
 footer {
     margin-top: 1rem;
     background-color: #333333;

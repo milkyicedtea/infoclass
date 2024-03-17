@@ -1,6 +1,6 @@
 @font-face {
 	font-family: "Paper Bow";
-	src: url("../Assets/PaperLily/Fonts/Easy listening.otf");
+	src: url("../Assets/PaperLily/Fonts/EasyListening.otf");
 }
 
 * {
@@ -253,6 +253,14 @@ body::before {
 
 .character-card:hover::before {
 	opacity: 1;
+}
+
+iframe {
+	width: 70%;
+	aspect-ratio: 16/9;
+	margin: 1.5rem;
+	border-radius: 1rem;
+	border: calc(1 * (1rem/16)) solid #ae85f0;
 }
 
 footer {
