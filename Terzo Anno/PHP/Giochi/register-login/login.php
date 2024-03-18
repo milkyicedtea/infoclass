@@ -1,23 +1,15 @@
 <?php
 	session_start();
-	$db_host = 'localhost';
-	$db_username = 'root';
-	$db_password = '';
+    require '../config.php';
 
-	// MySQLi connection
-	$conn = mysqli_connect($db_host,$db_username,$db_password);
+$conn = getConn();
 
-	// MySQLi error
-	if (mysqli_connect_errno()){
-		exit('Impossibile connettersi al database'. mysqli_connect_error());
-	}
-
-	// Check params presence
+// Check params presence
 	if (!isset($_POST['username'], $_POST['password'])){
 		exit('Riempire tutti i campi.');
 	}
 
-	if ($stmt = $conn->prepare('select id_utente, `password`, `admin` from giochi.utenti where username = ?')){
+	if ($stmt = $conn->prepare('select id_utente, `password`, `admin` from utenti where username = ?')){
 		// Bind parameters (s = string, i = int, etc)
 		$stmt->bind_param('s', $_POST['username']);
 		$stmt->execute();

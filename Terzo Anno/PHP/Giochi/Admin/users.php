@@ -1,4 +1,6 @@
 <?php
+    require '../config.php';
+
 	session_start();
 
 	if (!isset($_SESSION['logged-in']) or !$_SESSION['admin']) {
@@ -33,12 +35,7 @@
 	<div class="userTable">
 		<h1>Tabella Utenti</h1>
 		<?php
-			// Connessione al database
-			$db_host = 'localhost';
-			$db_username = 'root';
-			$db_password = '';
-
-			$conn = mysqli_connect($db_host, $db_username, $db_password);
+			$conn = getConn();
 
 			// Verifica la connessione al database
 			if (mysqli_connect_errno()) {
@@ -46,7 +43,7 @@
 			}
 
 			// Query per selezionare tutti gli utenti ordinati per ID
-			$query = "SELECT * FROM giochi.utenti ORDER BY id_utente";
+			$query = "SELECT * FROM utenti ORDER BY id_utente";
 			$result = mysqli_query($conn, $query);
 
 			// Verifica se ci sono risultati
