@@ -2,7 +2,7 @@
 	session_start();
 
 	if (!isset($_SESSION['logged-in']) or !$_SESSION['admin']) {
-		header('location: register-login/register.html');
+		echo "<script>alert('Non sei autorizzato ad accedere a questa pagina'); window.location.replace('../home.php')</script>";
 		exit;
 	}
 ?>
