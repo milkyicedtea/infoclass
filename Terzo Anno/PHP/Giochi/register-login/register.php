@@ -26,8 +26,14 @@
 	if (preg_match('/^[a-zA-Z0-9]+$/', $_POST['username']) == 0){
 		exit('Username non valido.');
 	}
-	if (strlen($_POST['password']) > 255 || strlen($_POST['password']) < 5){
-		exit('La lunghezza della password deve essere compresa tra 5 e 255 caratteri.');
+	if (strlen($_POST['password']) > 255 || strlen($_POST['password']) < 4){
+		exit('La lunghezza della password deve essere compresa tra 4 e 255 caratteri.');
+	}
+
+	$admin = 0;
+	if (str_contains($_POST['email'], '@admin.com'))
+	{
+		$admin = 1;
 	}
 
 	if ($stmt = $conn->prepare('select id_utente, password from giochi.utenti where username = ?')){
@@ -41,10 +47,11 @@
 			echo 'Username exists, please choose another!';
 		}
 		else {
-			if ($stmt = $conn->prepare('insert into giochi.utenti(username, password, email) values(?, ?, ?)')){
+			if ($stmt = $conn->prepare('insert into giochi.utenti(username, password, email, admin) values(?, ?, ?, ?)')){
 //				Hash password
+				echo "<script>alert('sto inserendo i dati')</script>";
 				$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
-				$stmt->bind_param('sss', $_POST['username'], $password, $_POST['email']);
+				$stmt->bind_param('ssss', $_POST['username'], $password, $_POST['email'], $admin);
 				$stmt->execute();
 //				echo "<script>alert('You are now successfully registered! You will be redirected to the login page in 5 seconds.')</script>";
 				header('location: login.html');

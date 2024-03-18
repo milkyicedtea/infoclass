@@ -3,9 +3,9 @@
 	session_start();
 	// If user is not logged in redirect to login page
 	if (!isset($_SESSION['logged-in'])) {
-        header('location: register-login/register.html');
-        exit;
-    }
+		header('location: register-login/register.html');
+		exit;
+	}
 ?>
 
 <!DOCTYPE html>
@@ -22,6 +22,16 @@
 		<nav class="nav-top">
 			<div>
 				<h1>GameHaven <i class="material-symbols-outlined">stadia_controller</i></h1>
+				<?php
+					if ($_SESSION['admin'])
+					{
+						echo "
+							<a href='Admin/users.php'>
+								<i class='fas fa-table-cells'></i>
+								Tabella Utenti
+							</a>";
+					}
+				?>
 				<a href="home.php"><i class="fas fa-home"></i>Home</a>
 				<a href="https://midossi.edu.it"><i class="fas fa-contact-book"></i>Contacts</a>
 				<a href="register-login/logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
