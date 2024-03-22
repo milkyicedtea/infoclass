@@ -2,7 +2,6 @@
 
 require_once '../config.php';
 
-
 function create_otp(): int
 {
     return rand(100000, 999999);
@@ -23,7 +22,7 @@ function send_otp($userid, $email): void
             $email,
             'OTP verification for 051205.xyz',
             'Your otp verification code is **'.$otp_code.'**',
-            'From: milkyicedtea@proton.me'.'\r\n'.'CC:'.$email
+            'From: 051205.xyz verification'
         );
 
         header('location: otp.html');

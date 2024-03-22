@@ -46,6 +46,6 @@ if (isset($_POST['otp'], $_SESSION['id'])) {
     exit();
 } else {
     // OTP form not submitted, redirect user to OTP verification page
-    header('location: otp_verification.html');
+    header('location: otp.html');
     exit();
 }
