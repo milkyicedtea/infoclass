@@ -1,0 +1,96 @@
+/* Global styling */
+* {
+	box-sizing: border-box;
+	font-family:
+		-apple-system,
+		BlinkMacSystemFont,
+		"segoe ui",
+		roboto,
+		oxygen,
+		ubuntu,
+		cantarell,
+		"fira sans",
+		"droid sans",
+		"helvetica neue",
+		Arial,
+		sans-serif;
+	font-size: 16px;
+}
+
+body.register-login {
+	background-color: #121212;
+}
+
+/* Register and login styling */
+.register-login {
+	border-radius: .5rem;
+	width: 25rem;
+	height: 100%;
+	background-color: #282828;
+	box-shadow: 0 0 1rem 0 #0000004C;
+	margin: 6.5rem auto;
+}
+
+.register-login h1 {
+	text-align: center;
+	color: #ffffff;
+	font-size: 1.5rem;
+	padding: 1.25rem 0;
+	border-bottom: .0625rem solid #dee0e4;
+}
+
+.register-login form {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding-top: 20px;
+}
+
+.register-login form label {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 50px;
+	height: 50px;
+	color: #ffffff;
+}
+
+.register-login form input:focus {
+	outline: none;
+}
+
+.register-login form input[type="password"],
+.register-login form input[type="text"],
+.register-login form input[type="email"] {
+	border: 1px solid royalblue;
+	width: 310px;
+	height: 50px;
+	margin-bottom: 20px;
+	padding: 0 15px;
+	background-color: inherit;
+	color: #ffffff;
+}
+
+.register-login form input[type="submit"],
+.register-login form input[type="button"] {
+	border: none;
+	border-top: 1px solid aliceblue;
+	width: 100%;
+	padding: 15px;
+	background-color: #3274d6;
+	cursor: pointer;
+	font-weight: bold;
+	color: #ffffff;
+	transition: background-color 0.2s;
+}
+
+.register-login form input[type="button"] {
+	border-bottom-right-radius: .5rem;
+	border-bottom-left-radius: .5rem;
+}
+
+.register-login form input[type="submit"]:hover,
+.register-login form input[type="button"]:hover {
+	background-color: #2868c7;
+	transition: background-color 0.2s;
+}

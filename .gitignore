@@ -60,5 +60,7 @@ build.xml
 
 #old files
 *.old
-Terzo Anno/PHP/Giochi/.env
-Terzo Anno/PHP/Giochi/config.php
+
+#env and configs
+.env
+config.php
