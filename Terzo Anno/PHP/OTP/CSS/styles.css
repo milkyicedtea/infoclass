@@ -84,7 +84,8 @@ body.register-login {
 	transition: background-color 0.2s;
 }
 
-.register-login form input[type="button"] {
+.register-login form input[type="button"],
+.otpLogin {
 	border-bottom-right-radius: .5rem;
 	border-bottom-left-radius: .5rem;
 }
