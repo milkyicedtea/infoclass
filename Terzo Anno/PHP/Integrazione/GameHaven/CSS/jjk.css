@@ -1,0 +1,275 @@
+@font-face {
+    font-family: 'Jujutsu Kaisen';
+    src: url("../Assets/JujutsuKaisen/Fonts/JujutsuKaisen.ttf");
+}
+
+* {
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+    -webkit-user-drag: none;
+    user-select: none;
+    box-sizing: border-box;
+    font-family:
+      -apple-system,
+      BlinkMacSystemFont,
+      "segoe ui",
+      roboto,
+      oxygen,
+      ubuntu,
+      cantarell,
+      "fira sans",
+      "droid sans",
+      "helvetica neue",
+      Arial,
+      sans-serif;
+    font-size: 16px;
+    /* Hide scrollbars	*/
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    background-image: url("../Assets/JujutsuKaisen/JujutsuKaisen-Background.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #ffffff;
+    margin: 0;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.nav-top {
+    background-color: #1e1e1e;
+    box-shadow: 0 .25rem .125rem rgba(0, 0, 0, 0.1);
+    height: 3.75rem;
+    width: 100%;
+    border: 0;
+}
+
+.nav-top div {
+    display: flex;
+    padding: 0 1rem;
+    width: 100%;
+    height: 100%;
+}
+
+.nav-top h1 {
+    display: inline-flex;
+    align-items: center;
+    flex: 1;
+    font-size: 1.5rem;
+    padding: 0;
+    margin: 0;
+    color: #eaebed;
+    font-weight: normal;
+}
+
+.nav-top h1 i {
+    display: inline-flex;
+    flex: 1;
+    align-items: end;
+    padding: .5rem .5rem 0 .5rem;
+}
+
+.nav-top a,
+.nav-top p {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 1.25rem;
+    text-decoration: none;
+    color: #c1c4c8;
+    font-weight: bold;
+}
+
+.nav-top i {
+    padding: .125rem .5rem 0 0;
+}
+
+.nav-top a:hover {
+    color: #eaebed;
+}
+
+.main-div {
+    text-decoration: none;
+    padding: 0 1rem;
+    margin-bottom: 4rem;
+    color: inherit;
+    text-align: center;
+}
+
+.game-title {
+    padding: .5rem;
+    margin: 0;
+    font-size: 2rem;
+    background: #cd4e64;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    font-family: "Jujutsu Kaisen", serif;
+}
+
+.game-intro {
+    background: rgba(0, 0, 0, 0.5); /* Dark semi-transparent background */
+    padding: 1rem; /* Adjust padding as needed */
+    border-radius: .625rem; /* Adjust border radius as needed */
+    margin-left: 20rem;
+    margin-right: 20rem;
+}
+
+.italic {
+    font-weight: bold;
+    font-style: italic;
+    font-size: 1.2rem;
+}
+
+.characters-section {
+    /*margin-top: 1.5rem;*/
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    justify-content: center;
+}
+
+.character {
+    place-self: center;
+    max-width: 60%;
+    aspect-ratio: 9/15.75;
+    display: grid;
+    /*margin: .50rem 0; !* Y, X *!*/
+}
+
+.character:before {
+    display: block;
+    vertical-align: middle;
+    padding: 0;
+    margin-right: 0.1rem; /* Adjust this value as needed */
+}
+
+/* Define a breakpoint for smaller screens */
+@media screen and (max-width: 1200px) {
+    .characters-section {
+        grid-template-columns: repeat(2, 50%);
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .character {
+        max-width: 80%;
+        margin: 1rem auto;
+    }
+}
+
+/* Define a breakpoint for even smaller screens */
+@media screen and (max-width: 480px) {
+    .characters-section {
+        grid-template-columns: 100%;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+    .character {
+        max-width: 90%;
+        margin: 1rem auto;
+    }
+}
+
+.character-card {
+    position: relative;
+    transition: transform .2s;
+    background-color: #1d0d0e;
+    border-radius: .5rem;
+    box-shadow: 0 calc(2 * (1rem/16)) .25rem rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+}
+
+.character-card:hover {
+    transform: scale(1.1);
+}
+
+.character-card img {
+    /*vertical-align: bottom;*/
+    width: 100%;
+    object-fit: cover;
+    border: calc(1 * (1rem/16)) solid #cd4e64;
+    border-radius: .5rem;
+    filter: blur(0); /* Initial no blur */
+    transition: filter 0.3s ease-in-out;
+}
+
+.character-card:hover img {
+    filter: blur(5px); /* Adjust the blur amount as needed */
+}
+
+.character-card h3 {
+    place-self: center;
+    vertical-align: center;
+    padding-top: .25rem;
+    margin: 0;
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-family: "Jujutsu Kaisen", serif;
+}
+
+.character-card::before {
+    font-weight: bold;
+    content: attr(data-description);
+    position: absolute;
+    vertical-align: center;
+    top: .5rem;
+    margin-left: .5rem;
+    margin-right: .5rem;
+    background: rgba(0, 0, 0, 0.8);
+    border: calc(1 * (1rem/16)) solid #cd4e64;
+    color: #ffffff;
+    padding: .5rem;
+    border-radius: .25rem;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 1; /* Ensure the text appears above the blurred image */
+}
+
+.character-card:hover::before {
+    opacity: 1;
+}
+
+iframe {
+    width: 70%;
+    aspect-ratio: 16/9;
+    margin: 1.5rem;
+    border-radius: 1rem;
+    border: calc(1 * (1rem/16)) solid #cd4e64;
+}
+
+footer {
+    margin-top: 1rem;
+    background-color: #333333;
+    color: #ffffff;
+    text-align: center;
+    padding: calc(10 * (1rem/16));
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
