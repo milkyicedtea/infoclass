@@ -21,7 +21,6 @@
 	<body class="home">
 		<nav class="nav-top">
 			<div>
-                <hr>
 				<a href="home.php"><i class="fas fa-home"></i>Home</a>
 				<a href="https://midossi.edu.it"><i class="fas fa-contact-book"></i>Contacts</a>
 				<a href="../register-login/logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>

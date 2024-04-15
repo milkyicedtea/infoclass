@@ -1,0 +1,105 @@
+* {
+	-webkit-user-drag: none;
+	user-select: none;
+	box-sizing: border-box;
+	font-family:
+		-apple-system,
+		BlinkMacSystemFont,
+		"segoe ui",
+		roboto,
+		oxygen,
+		ubuntu,
+		cantarell,
+		"fira sans",
+		"droid sans",
+		"helvetica neue",
+		Arial,
+		sans-serif;
+	font-size: 16px;
+}
+
+body.home {
+	color: white;
+	background: url("../Assets/background.jpg") fixed no-repeat center;
+	background-size: cover;
+	margin: 0;
+}
+
+.main-div {
+	text-decoration: none;
+	padding: 0 1rem;
+	color: inherit;
+}
+
+.image-grid {
+	display: grid;
+	grid-template-columns: 50% 50%;
+	grid-gap: 1rem;
+	justify-content: center;
+}
+
+.topic {
+	place-self: center;
+	max-width: 85%;
+	display: grid;
+	margin: 25% 0; /* Y, X */
+}
+
+.topic:before {
+	display: block;
+	height: 100%;
+	vertical-align: middle;
+	/*margin-right: -0.25em; !* Adjust this value as needed *!*/
+}
+
+.topic-card {
+	width: 100%;
+	/*margin-bottom: calc(20 * (1rem/16));*/
+	transition: transform .3s;
+	background-color: #333333;
+	border-radius: .5rem;
+	box-shadow: 0 calc(2 * (1rem/16)) .25rem rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+	text-align: center;
+}
+
+.topic-card:hover {
+	transform: scale(110%);
+}
+
+.topic-card img {
+	width: 100%;
+	object-fit: cover;
+	filter: blur(4px);
+	transition: filter .3s ease-in-out;
+}
+
+.topic-card:hover img {
+	filter: blur(0);
+}
+
+.topic-card h3 {
+	padding: calc(5 * (1rem/16));
+	margin: 0;
+	color: #ffffff;
+	vertical-align: center;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.topic-card a {
+	text-decoration: none;
+	user-select: none;
+	-webkit-user-drag: none;
+}
+
+footer {
+	background-color: #333333;
+	color: #ffffff;
+	text-align: center;
+	padding: calc(10 * (1rem/16));
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}

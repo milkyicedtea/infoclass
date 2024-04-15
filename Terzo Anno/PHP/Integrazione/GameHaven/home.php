@@ -44,7 +44,6 @@
 		<div class="main-div">
 			<h2 class="featured-games">Featured Games</h2>
 			<section class="games-section">
-
 				<div class="game">
 					<div class="game-card">
 						<a href="Games/JJK-CC.php" draggable="false">
