@@ -48,7 +48,7 @@
 						Lacie al Faro e può fornire oggetti utili al giocatore in cambio di rune
 						collezionabili durante il gioco"
 					>
-						<img src="../Assets/PaperLily/Rune.png" alt="Rune" draggable="false">
+						<img src="../Assets-GH/PaperLily/Rune.png" alt="Rune" draggable="false">
 						<h3>Rune</h3>
 					</div>
 				</div>
@@ -62,7 +62,7 @@
 						 una misteriosa lettera d'oro dopo una serie di disgrazie che la trasporta in un
 						 mondo dove cerca una cura per la sua condizione anormale."
 					>
-						<img src="../Assets/PaperLily/Lacie.png" alt="Lacie" draggable="false">
+						<img src="../Assets-GH/PaperLily/Lacie.png" alt="Lacie" draggable="false">
 						<h3>Lacie</h3>
 					</div>
 				</div>
@@ -76,7 +76,7 @@
 						 non si sa molto di lui nel capitolo, anche se le sue azioni e la sua personalità
 						 la dicono lunga sul suo personaggio."
 					>
-						<img src="../Assets/PaperLily/Sai.png" alt="Sai" draggable="false">
+						<img src="../Assets-GH/PaperLily/Sai.png" alt="Sai" draggable="false">
 						<h3>Sai</h3>
 					</div>
 				</div>
@@ -90,7 +90,7 @@
 						noto per la sua abilità con i coltelli. Il suo ruolo chiave nella trama aggiunge
 						mistero, rivelando vari segreti intricati legati al mondo del gioco."
 					>
-						<img src="../Assets/PaperLily/Miss_Knives.png" alt="Miss Knives" draggable="false">
+						<img src="../Assets-GH/PaperLily/Miss_Knives.png" alt="Miss Knives" draggable="false">
 						<h3>Miss Knives</h3>
 					</div>
 				</div>

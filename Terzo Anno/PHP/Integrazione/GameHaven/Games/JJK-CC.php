@@ -50,7 +50,7 @@
 						 primo anno e stregone jujutsu di grado 3 alla Tokyo Jujutsu High che studia con Satoru
 						 Gojo insieme a Yuji e Megumi."
 				>
-					<img src="../Assets/JujutsuKaisen/Nobara-Kugisaki.png" alt="Nobara Kugisaki" draggable="false">
+					<img src="../Assets-GH/JujutsuKaisen/Nobara-Kugisaki.png" alt="Nobara Kugisaki" draggable="false">
 					<h3>Nobara Kugisaki</h3>
 				</div>
 			</div>
@@ -63,7 +63,7 @@
 						Yuji viveva una vita normale finché non incontrò Megumi e mangiò una delle
 						dita di Sukuna."
 				>
-					<img src="../Assets/JujutsuKaisen/Yuji-Itadori.png" alt="Yuji Itadori" draggable="false">
+					<img src="../Assets-GH/JujutsuKaisen/Yuji-Itadori.png" alt="Yuji Itadori" draggable="false">
 					<h3>Yuji Itadori</h3>
 				</div>
 			</div>
@@ -76,7 +76,7 @@
 						È uno stregone jujutsu di grado speciale riconosciuto come il più forte al mondo.
 						Lavora come insegnante alla Tokyo Jujutsu High"
 				>
-					<img src="../Assets/JujutsuKaisen/Satoru-Gojo.png" alt="Satoru Gojo" draggable="false">
+					<img src="../Assets-GH/JujutsuKaisen/Satoru-Gojo.png" alt="Satoru Gojo" draggable="false">
 					<h3>Satoru Gojo</h3>
 				</div>
 			</div>
@@ -90,7 +90,7 @@
 						L'obiettivo finale del suo gruppo è l'eradicazione dell'umanità e
 						la sostituzione della popolazione con spiriti maledetti."
 				>
-					<img src="../Assets/JujutsuKaisen/Mahito.png" alt="Mahito" draggable="false">
+					<img src="../Assets-GH/JujutsuKaisen/Mahito.png" alt="Mahito" draggable="false">
 					<h3>Mahito</h3>
 				</div>
 			</div>

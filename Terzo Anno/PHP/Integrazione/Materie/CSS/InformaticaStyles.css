@@ -1,0 +1,169 @@
+* {
+	-webkit-user-drag: none;
+	user-select: none;
+	box-sizing: border-box;
+	font-family:
+		-apple-system,
+		BlinkMacSystemFont,
+		"segoe ui",
+		roboto,
+		oxygen,
+		ubuntu,
+		cantarell,
+		"fira sans",
+		"droid sans",
+		"helvetica neue",
+		Arial,
+		sans-serif;
+	font-size: 16px;
+}
+
+body.home {
+	color: white;
+	background-color: #121212;
+	margin: 0;
+	padding-bottom: 8rem;
+}
+
+.nav-top {
+	background-color: #1e1e1e;
+	box-shadow: 0 .25rem .125rem rgba(0, 0, 0, 0.1);
+	height: 3.75rem;
+	width: 100%;
+	border: 0;
+}
+
+.nav-top div {
+	display: flex;
+	padding: 0 1rem;
+	width: 100%;
+	height: 100%;
+}
+
+.nav-top h1 {
+	display: inline-flex;
+	align-items: center;
+	flex: 1;
+	font-size: 1.5rem;
+	padding: 0;
+	margin: 0;
+	color: #eaebed;
+	font-weight: normal;
+}
+
+.nav-top h1 i {
+	display: inline-flex;
+	flex: 1;
+	align-items: end;
+	padding: .5rem .5rem 0 .5rem;
+}
+
+.nav-top a,
+.nav-top p {
+	display: inline-flex;
+	align-items: center;
+	padding: 0 1.25rem;
+	text-decoration: none;
+	color: #c1c4c8;
+	font-weight: bold;
+}
+
+.nav-top i {
+	padding: .125rem .5rem 0 0;
+}
+
+.nav-top a:hover {
+	color: #eaebed;
+}
+
+.main-div {
+	text-decoration: none;
+	padding: 0 1rem;
+	color: inherit;
+	text-align: center;
+}
+
+.topic-title {
+	text-align: center;
+	padding-bottom: 1rem;
+	margin: .75rem;
+	font-size: 4rem
+}
+
+.topic-subtitle {
+	text-align: center;
+	padding-bottom: 1rem;
+	margin: .75rem;
+	font-size: 2.5rem;
+}
+
+.topic-intro {
+	background: rgba(0, 0, 0, 0.5); /* Dark semi-transparent background */
+	padding: 1rem; /* Adjust padding as needed */
+	border-radius: .625rem; /* Adjust border radius as needed */
+	text-align: left;
+	margin-left: 10rem;
+	margin-right: 10rem;
+	font-size: 2rem;
+}
+
+.accordion {
+	font-size: 1.5rem;
+	background-color: #1e1e1e;
+	color: #ffffff;
+	cursor: pointer;
+	padding: 18px;
+	width: 100%;
+	text-align: left;
+	outline: none;
+	border: none;
+	transition: 0.4s;
+	border-bottom: #ffffff solid
+}
+
+.active, .accordion:hover {
+	background-color: #444;
+}
+
+.panel {
+	padding: 0 18px;
+	background-color: #121212;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height .2s ease-out;
+}
+
+.inside-panel {
+	text-align: left;
+	margin-left: 1rem;
+	margin-right: 1rem;
+	font-size: 1.25rem;
+}
+
+ul {
+	margin-left: 22.5%;
+}
+
+.acronym-ul {
+	font-size: 1.25rem;
+	text-align: left;
+}
+
+iframe {
+
+	width: 70%;
+	aspect-ratio: 16/9;
+	margin: 1.5rem;
+	border-radius: 1rem;
+	border: calc(1 * (1rem/16)) solid #4ad7b7;
+}
+
+footer {
+	background-color: #333333;
+	color: #ffffff;
+	text-align: center;
+	padding: calc(10 * (1rem/16));
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}

@@ -46,7 +46,7 @@
 					"Inosuke Hashibira è uno dei personaggi principali di Demon Slayer e compagno di viaggio
 					 di Tanjiro. È anche un cacciatore di demoni nel Corpo degli Ammazzademoni."
 				>
-					<img src="../Assets/DemonSlayer/Inosuke.png" alt="Inosuke Hashibira" draggable="false">
+					<img src="../Assets-GH/DemonSlayer/Inosuke.png" alt="Inosuke Hashibira" draggable="false">
 					<h3>Inosuke Hashibira</h3>
 				</div>
 			</div>
@@ -59,7 +59,7 @@
 					È un cacciatore di demoni del Corpo degli Ammazzademoni, che si è unito per cercare un
 					rimedio per sua sorella, Nezuko Kamado, e farla tornare di nuovo umana."
 				>
-					<img src="../Assets/DemonSlayer/Tanjiro.png" alt="Tanjiro Kamado" draggable="false">
+					<img src="../Assets-GH/DemonSlayer/Tanjiro.png" alt="Tanjiro Kamado" draggable="false">
 					<h3>Tanjiro Kamado</h3>
 				</div>
 			</div>
@@ -72,7 +72,7 @@
 					È un demone e la sorella minore di Tanjiro Kamado.
 					Precedentemente umana, è stata attaccata e trasformata in un demone."
 				>
-					<img src="../Assets/DemonSlayer/Nezuko.png" alt="Nezuko Kamado" draggable="false">
+					<img src="../Assets-GH/DemonSlayer/Nezuko.png" alt="Nezuko Kamado" draggable="false">
 					<h3>Nezuko Kamado</h3>
 				</div>
 			</div>
@@ -85,7 +85,7 @@
 					Kimetsu no Yaiba e un personaggio importante nel secondo arco narrativo.
 					È un cacciatore di demoni del Corpo degli Ammazzademoni e Pilastro della Fiamma"
 				>
-					<img src="../Assets/DemonSlayer/Rengoku.png" alt="Kyojuro Rengoku" draggable="false">
+					<img src="../Assets-GH/DemonSlayer/Rengoku.png" alt="Kyojuro Rengoku" draggable="false">
 					<h3>Kyojuro Rengoku</h3>
 				</div>
 			</div>

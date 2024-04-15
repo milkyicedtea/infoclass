@@ -47,7 +47,7 @@
 				<div class="game">
 					<div class="game-card">
 						<a href="Games/JJK-CC.php" draggable="false">
-							<img src="Assets/JJK-CC-cover.jpg" alt="Jujutsu Kaisen Cursed Clash" draggable="false">
+							<img src="Assets-GH/JJK-CC-cover.jpg" alt="Jujutsu Kaisen Cursed Clash" draggable="false">
 							<h3>Jujutsu Kaisen Cursed Clash</h3>
 						</a>
 					</div>
@@ -56,7 +56,7 @@
 				<div class="game">
 					<div class="game-card">
 						<a href="Games/PL-CH1.php" draggable="false">
-							<img src="Assets/PL-CH1-cover.jpg" alt="Paper Lily - Chapter 1" draggable="false">
+							<img src="Assets-GH/PL-CH1-cover.jpg" alt="Paper Lily - Chapter 1" draggable="false">
 							<h3>Paper Lily - Chapter 1</h3>
 						</a>
 					</div>
@@ -65,7 +65,7 @@
 				<div class="game">
 					<div class="game-card">
 						<a href="Games/DS-KNY-THC.php" draggable="false">
-							<img src="Assets/DS-KNY-TCH-cover.jpg" alt="Demon Slayer -Kimetsu no Yaiba- The Hinokami Chronicles" draggable="false">
+							<img src="Assets-GH/DS-KNY-TCH-cover.jpg" alt="Demon Slayer -Kimetsu no Yaiba- The Hinokami Chronicles" draggable="false">
 							<h3>Demon Slayer -Kimetsu no Yaiba- The Hinokami Chronicles</h3>
 						</a>
 					</div>

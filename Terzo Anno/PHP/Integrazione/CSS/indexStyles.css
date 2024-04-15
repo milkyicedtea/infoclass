@@ -18,16 +18,26 @@
 	font-size: 16px;
 }
 
+html {
+	height: 100%;
+	width: 100%;
+}
 body.home {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-items: center;
 	color: white;
-	background: url("../Assets/background.jpg") fixed no-repeat center;
+	background: url("../Assets-Index/background.jpg") fixed no-repeat center;
 	background-size: cover;
 	margin: 0;
 }
 
+
 .main-div {
+	display: flex;
+	justify-items: center;
 	text-decoration: none;
-	padding: 0 1rem;
 	color: inherit;
 }
 
@@ -36,20 +46,12 @@ body.home {
 	grid-template-columns: 50% 50%;
 	grid-gap: 1rem;
 	justify-content: center;
+	align-items: center;
 }
-
 .topic {
 	place-self: center;
 	max-width: 85%;
 	display: grid;
-	margin: 25% 0; /* Y, X */
-}
-
-.topic:before {
-	display: block;
-	height: 100%;
-	vertical-align: middle;
-	/*margin-right: -0.25em; !* Adjust this value as needed *!*/
 }
 
 .topic-card {

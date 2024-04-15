@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Jujutsu Kaisen';
-    src: url("../Assets/JujutsuKaisen/Fonts/JujutsuKaisen.ttf");
+    src: url("../Assets-GH/JujutsuKaisen/Fonts/JujutsuKaisen.ttf");
 }
 
 * {
@@ -33,7 +33,7 @@
 }
 
 body {
-    background-image: url("../Assets/JujutsuKaisen/JujutsuKaisen-Background.jpg");
+    background-image: url("../Assets-GH/JujutsuKaisen/JujutsuKaisen-Background.jpg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;

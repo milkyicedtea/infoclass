@@ -1,6 +1,6 @@
 @font-face {
 	font-family: "Paper Bow";
-	src: url("../Assets/PaperLily/Fonts/EasyListening.otf");
+	src: url("../Assets-GH/PaperLily/Fonts/EasyListening.otf");
 }
 
 * {
@@ -33,7 +33,7 @@
 }
 
 body {
-	background-image: url("../Assets/PaperLily/PaperLily-Background.jpg");
+	background-image: url("../Assets-GH/PaperLily/PaperLily-Background.jpg");
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;

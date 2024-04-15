@@ -1,6 +1,6 @@
 @font-face {
 	font-family: "Blood Crow";
-	src: url("../Assets/DemonSlayer/Fonts/BloodCrow.ttf");
+	src: url("../Assets-GH/DemonSlayer/Fonts/BloodCrow.ttf");
 }
 
 * {
@@ -33,7 +33,7 @@
 }
 
 body {
-	background-image: url("../Assets/DemonSlayer/DemonSlayer-Bg.jpg");
+	background-image: url("../Assets-GH/DemonSlayer/DemonSlayer-Bg.jpg");
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
